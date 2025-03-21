@@ -1,0 +1,47 @@
+name: Deploy MkDocs with Poetry
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Ensures full history for mkdocs versioning
+
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'  # Must match your pyproject.toml version
+
+      - name: Install Poetry
+        run: |
+          pip install poetry
+          poetry config virtualenvs.create false  # Use system Python for easier dependency resolution
+          poetry install --no-interaction --no-root  # Install dependencies from pyproject.toml
+
+      - name: Cache Dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: dmb-docs-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: |
+            dmb-docs-${{ runner.os }}-
+
+      - name: Build and Deploy MkDocs
+        env:
+          DEPLOY_BRANCH: gh-pages
+        run: |
+          poetry run mkdocs build
+          poetry run mkdocs gh-deploy --force
