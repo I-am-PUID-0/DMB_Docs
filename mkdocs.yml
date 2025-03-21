@@ -1,0 +1,114 @@
+site_name: DMB
+site_description: DMB Documentation
+site_author: DMB Team
+site_url: "https://I-am-PUID-0.github.io/docs"
+repo_name: "I-am-PUID-0/DMB"
+repo_url: "https://github.com/I-am-PUID-0/DMB"
+
+
+nav:
+  - Home: index.md
+  - Features:
+      - Overview: features/index.md
+      - Configuration: features/configuration.md
+      - Usage: features/usage.md  
+  - Getting Started:
+      - Introduction: getting-started/index.md
+      - Installation: getting-started/installation.md
+  - Services:
+      - Overview: services/index.md
+      - DMB Frontend: services/dmb-frontend.md
+      - pgAdmin: services/pgadmin.md
+      - Postgres: services/postgres.md
+      - rclone: services/rclone.md
+      - Riven Backend: services/riven-backend.md      
+      - Riven Frontend: services/riven-frontend.md
+      - Zilean: services/zilean.md
+      - Zurg: services/zurg.md
+  - Deployment:
+      - Docker: deployment/docker.md
+      - Portainer: deployment/portainer.md 
+      - Unraid: deployment/unraid.md     
+      - WSL: deployment/wsl.md
+  - API Reference:
+      - Endpoints: api/endpoints.md      
+  - FAQ: 
+      - DMB: faq/dmb.md
+      - pgAdmin: faq/pgadmin.md
+      - Postgres: faq/postgres.md
+      - rclone: faq/rclone.md
+      - Riven: faq/riven.md
+      - Zilean: faq/zilean.md
+      - Zurg: faq/zurg.md
+  - Changelog: changelog.md
+  - Contributing: contributing.md
+  - About: about.md
+
+theme:
+  name: material
+  logo: assets/images/DMB.png
+  favicon: assets/images/favicon.ico
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+
+
+extra:
+  generator: false
+
+extra_css:
+  - assets/css/main.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables
+  - codehilite:
+      linenums: false
+  - toc:
+      permalink: true
+      toc_depth: 2
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  # - pymdownx.blocks.admonition
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - pymdownx.mark
+  - pymdownx.keys
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      permalink: "#"  
