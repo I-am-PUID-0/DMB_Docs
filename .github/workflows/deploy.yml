@@ -1,31 +1,47 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy MkDocs with Poetry
 
 on:
   push:
     branches:
       - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Docs Repo
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-          python-version: 3.11
+          fetch-depth: 0  # Ensures full history for mkdocs versioning
 
-      - name: Install MkDocs and plugins
+      - name: Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'  # Must match your pyproject.toml version
+
+      - name: Install Poetry
         run: |
-          pip install mkdocs mkdocs-material
-          pip install -r requirements.txt || true
+          pip install poetry
+          poetry config virtualenvs.create false  # Use system Python for easier dependency resolution
+          poetry install --no-interaction --no-root  # Install dependencies from pyproject.toml
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Cache Dependencies
+        uses: actions/cache@v4
         with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./site
-            publish_branch: gh-pages
+          path: ~/.cache/pip
+          key: dmb-docs-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: |
+            dmb-docs-${{ runner.os }}-
+
+      - name: Build and Deploy MkDocs
+        env:
+          DEPLOY_BRANCH: gh-pages
+        run: |
+          poetry run mkdocs build
+          poetry run mkdocs gh-deploy --force
