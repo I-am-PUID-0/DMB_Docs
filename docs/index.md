@@ -9,7 +9,7 @@ hide:
         <picture>
             <img
                 alt="DMB"
-                src="../docs/assets/images/DMB.png"
+                src="assets/images/DMB.png"
                 style="max-width: 50%; height: auto; border-radius: 10px;"
             >
         </picture>
