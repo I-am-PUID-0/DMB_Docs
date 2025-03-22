@@ -8,28 +8,31 @@ To integrate the DMB Frontend into your setup, you can add the following configu
 
 ```json
 {
-  "dmb_frontend": {
-    "enabled": true,
-    "process_name": "DMB Frontend",
-    "repo_owner": "nicocapalbo",
-    "repo_name": "dmbdb",
-    "release_version_enabled": true,
-    "release_version": "v1.7.2",
-    "branch_enabled": false,
-    "branch": "main",
-    "suppress_logging": false,
-    "log_level": "INFO",
-    "host": "0.0.0.0",
-    "port": 3000,
-    "auto_update": true,
-    "auto_update_interval": 24,
-    "clear_on_update": true,
-    "exclude_dirs": [],
-    "platforms": ["nodejs"],
-    "command": ["node", "build"],
-    "config_dir": "/dmb/frontend",
-    "env": {}
-  }
+    "frontend": {
+        "enabled": true,
+        "process_name": "DMB Frontend",
+        "repo_owner": "nicocapalbo",
+        "repo_name": "dmbdb",
+        "release_version_enabled": false,
+        "release_version": "v1.2.0",
+        "branch_enabled": false,
+        "branch": "main",
+        "suppress_logging": false,
+        "log_level": "INFO",            
+        "origins": [
+            "http://0.0.0.0:3005"
+        ],
+        "host": "0.0.0.0",
+        "port": 3005,            
+        "auto_update": false,
+        "auto_update_interval": 24,
+        "clear_on_update": true,
+        "exclude_dirs": [],
+        "platforms": ["pnpm"],
+        "command": ["node",".output/server/index.mjs"],
+        "config_dir": "/dmb/frontend",
+        "env": {}            
+    }
 }
 ```
 
