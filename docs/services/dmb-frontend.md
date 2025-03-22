@@ -28,9 +28,7 @@ To integrate the DMB Frontend into your setup, you can add the following configu
     "platforms": ["nodejs"],
     "command": ["node", "build"],
     "config_dir": "/dmb/frontend",
-    "env": {
-      "DMB_API_URL": "http://localhost:5000/api"
-    }
+    "env": {}
   }
 }
 ```
@@ -53,7 +51,7 @@ To integrate the DMB Frontend into your setup, you can add the following configu
 - **`platforms`**: Specifies the runtime environment required (`nodejs`).
 - **`command`**: Command to start the frontend service.
 - **`config_dir`**: Directory where configuration files are stored.
-- **`env`**: Environment variables for the frontend, such as `DMB_API_URL` pointing to the DMB API endpoint.
+- **`env`**: Environment variables for the frontend.
 
 ---
 
