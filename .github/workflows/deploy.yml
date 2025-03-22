@@ -18,13 +18,13 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Ensures full history for mkdocs versioning
+          fetch-depth: 0
 
       - name: Set Up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'  # Must match your pyproject.toml version
-
+          python-version: '3.11'
+          
       - name: Install Poetry
         run: |
           pip install poetry
@@ -39,9 +39,17 @@ jobs:
           restore-keys: |
             dmb-docs-${{ runner.os }}-
 
-      - name: Build and Deploy MkDocs
-        env:
-          DEPLOY_BRANCH: gh-pages
-        run: |
-          poetry run mkdocs build
-          poetry run mkdocs gh-deploy --force
+      - name: Build MkDocs
+        run: poetry run mkdocs build
+
+      - name: Deploy to DMB_Docs gh-pages
+        run: poetry run mkdocs gh-deploy --force
+
+      - name: Mirror to DMB gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          external_repository: I-am-PUID-0/DMB
+          personal_token: ${{ secrets.DMB_MIRROR_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
+
