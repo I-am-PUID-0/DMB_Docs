@@ -8,6 +8,7 @@ title: Features Overview
 DMB (Debrid Media Bridge) is an all-in-one media management solution designed to streamline the process of **finding, downloading, organizing, and streaming media content**. It integrates multiple services into a **single Docker image**, providing automation and efficiency for managing media libraries.
 
 ### 🔑 Key Features
+
 - **Unified Deployment** – Combines multiple tools into a single, easy-to-deploy system.
 - **Automated Content Management** – Uses **Debrid Services**, **Plex Discover Watchlists**, **Trakt lists**, and **Overseerr** to automate media retrieval.
 - **Integrated Web UI** – Control and manage services through a simple **web-based interface**.
@@ -34,7 +35,9 @@ DMB integrates the following projects to create a seamless media experience:
 - **pgAdmin 4** provides a **web-based database management interface**, making it easy to manage PostgreSQL.
 
 ## 🔍 How Does It Work?
+
 DMB simplifies the media management workflow by:
+
 1. **Scanning User Watchlists** (Plex, Trakt, Overseerr, etc.).
 2. **Fetching Media from Debrid Services** (Real-Debrid, AllDebrid, etc.).
 3. **Downloading & Organizing Content** using Zurg & Riven.
