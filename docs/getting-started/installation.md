@@ -21,7 +21,7 @@ Before you deploy DMB, make sure your environment and accounts are ready.
 
     Docker Desktop does not support the [mount propagation](https://docs.docker.com/storage/bind-mounts/#configure-bind-propagation) required for rclone mounts.
 
-    ![image](https://github.com/I-am-PUID-0/DMB/assets/36779668/aff06342-1099-4554-a5a4-72a7c82cb16e)
+    ![image](../assets/images/docker_desktop.png)
 
     See the [deployment options](https://i-am-puid-0.github.io/DMB/deployment/wsl) to run DMB on Windows through WSL2.
 ---
