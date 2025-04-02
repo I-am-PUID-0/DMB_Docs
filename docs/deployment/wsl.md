@@ -1,3 +1,6 @@
+---
+title: Deploy with WSL
+---
 
 ## 🖥️ Windows Setup Guide (Docker/WSL)
 

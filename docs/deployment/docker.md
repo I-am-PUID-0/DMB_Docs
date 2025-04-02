@@ -1,11 +1,29 @@
-
-## 📦 Docker Complete Beginners Guide
-
-!!! note 
-    This guide will use Ubuntu, so the commands used may differ if using a different Linux distro. 
+---
+title: Deploy with Docker
+---
 
 
-### 🐳 Install Docker
+## 📦 Deploying DMB with Docker
+
+Welcome to the official Docker deployment guide for **DMB (Debrid Media Bridge)** — a powerful all-in-one container designed to streamline media management using debrid services.
+
+This guide will walk you through every step, from installing Docker to setting up and running the DMB container. Whether you're new to Docker or just need a quick refresher, you'll be up and running in no time.
+
+
+## ✅ Prerequisites
+
+Before you begin, make sure you have the following:
+
+- A system running **Ubuntu 20.04 or later**  
+- A **non-root user** with `sudo` privileges  
+- An active internet connection  
+- Basic familiarity with using the **terminal**
+
+!!! tip
+    This guide assumes you're installing Docker on a fresh Ubuntu setup. If you're on Windows, refer to the [Windows Setup Guide (Docker/WSL)](wsl.md).
+
+
+## 🐳 Install Docker
 1. From Ubuntu, install Docker by pasting the following into the Ubuntu Command Line Interface (CLI); follow the prompts. 
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -32,7 +50,7 @@ ubuntu@DMB:~$ docker compose version
 Docker Compose version v2.24.2
 ```
 
-### 📁 Define the Directory Structure
+## 📁 Define the Directory Structure
 
 !!! note
     If you already have a directory structure you'd like to use, then you can skip this step.
@@ -48,7 +66,7 @@ mkdir -p DMB/config DMB/log DMB/Zurg/RD /DMB/Zurg/mnt DMB/Riven/data DMB/Riven/m
 ```
 
 
-### ✏️ Download and Edit the docker-compose.yml
+## ✏️ Download and Edit the docker-compose.yml
 !!! important 
     The docker-compose.yml file will need to be edited to include the necessary environment variable values.
 
@@ -88,7 +106,7 @@ sed -i \
 
 ----
 
-### 🚀 Start up the Docker Compose
+## 🚀 Start up the Docker Compose
 
 !!! note 
     The following command starts Docker Compose in detached mode, meaning it runs in the background and frees up your terminal.
@@ -115,6 +133,15 @@ ubuntu@DMB:~/docker$ sudo docker compose up -d
 ```
 
 ✅ Once started, the container will run in the background.
+
+
+## 🎉 That’s It!
+
+Once deployed, DMB will initialize and make its services available at their respective ports (e.g., DMB Frontend at `:3005`, API at `:8000`, etc.).
+
+You can now manage DMB entirely through the **DMB Frontend**, or explore the [Configuration](../configuration/configuration.md) docs to adjust settings as needed.
+
+---
 
 ## 🛠️ Additional Useful Commands
 
