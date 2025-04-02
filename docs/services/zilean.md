@@ -1,4 +1,4 @@
-Zilean is a service that enables users to search for content sourced by DebridMediaManager (DMB) and shared by others. It can be configured as a Torznab indexer in various content applications, allowing seamless integration and content discovery. Additionally, Zilean can scrape data from a running Zurg instance and other Zilean instances. 
+Zilean is a service that enables users to search for content sourced by [Debrid Media Manager](https://github.com/debridmediamanager/) and shared by others. It can be configured as a Torznab indexer in various content applications, allowing seamless integration and content discovery. Additionally, Zilean can scrape data from a running Zurg instance and other Zilean instances. 
 
 ---
 

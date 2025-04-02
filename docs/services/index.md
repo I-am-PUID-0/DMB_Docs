@@ -31,7 +31,7 @@ DMB is built as a collection of microservices, each fulfilling a specific role i
 
 4. **Metadata Caching**
 
-    - 🧠 **Zilean** caches metadata (e.g., hashes, filenames) and serves repeated requests to reduce lookup time for content Riven is indexing. In particular, [Debrid Media Manager](https://github.com/debridmediamanager/debrid-media-manager) (DMM) community hashes are leveraged to in an attempt to parse available content from Real-Debrid.
+    - 🧠 **Zilean** caches metadata (e.g., hashes, content names) and serves repeated requests to reduce lookup time for content Riven is indexing. In particular, [Debrid Media Manager](https://github.com/debridmediamanager/debrid-media-manager) (DMM) community hashes are leveraged to in an attempt to parse available content from Real-Debrid.
 
     !!! note "See the [Zilean Wiki](https://ipromknight.github.io/zilean/getting-started.html) for more details"
 
