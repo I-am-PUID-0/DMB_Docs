@@ -1,6 +1,6 @@
 # rclone FAQ
 
-Below are commonly recommended settings and known issues when using **rclone** with DMB.
+Below are some common questions and solutions related to using **rclone** with **DMB**.
 
 ---
 ## ❓ Frequently Asked Questions (FAQ)

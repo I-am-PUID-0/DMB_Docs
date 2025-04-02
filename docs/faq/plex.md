@@ -4,7 +4,7 @@ title: Plex FAQ
 
 # Plex FAQ
 
-Below are commonly recommended settings and known issues when using **Plex** alongside **DMB** with services like Zurg and Rclone.
+Below are some common questions and solutions related to when using **Plex** alongside **DMB** with services like Zurg and Rclone.
 
 ---
 ## ❓ Frequently Asked Questions (FAQ)
