@@ -1,11 +1,12 @@
-## Windows Setup Guide (Docker/WSL)
+
+## 🖥️ Windows Setup Guide (Docker/WSL)
 
 !!! warning "Docker Desktop"
     Ensure that Docker Desktop is not installed; if so, uninstall and reboot before proceeding.
 
 ----
 
-### WSL Install
+### 🐧 WSL Install
 
 1. From the Microsoft store, install Windows Subsystem for Linux (WSL)
 
@@ -38,7 +39,7 @@
 
 ----
 
-### Docker Install
+### 🐳 Docker Install
 
 1. Follow the **[Docker](https://docs.docker.com/engine/install/ubuntu/)** install guide.
 
@@ -46,7 +47,7 @@
 
 ----
 
-### Accessing the mount on Windows
+### 📂 Accessing the Mount on Windows
 
 1. From the Ubuntu terminal, paste the following, including the punctuation:
 
@@ -64,6 +65,6 @@
 
 6. Follow the remaining prompted steps
 
-### Extra credit
+### 🌟 Extra Credit
 
 1. install **[Portainer](https://docs.portainer.io/start/install-ce/server/docker/linux)**
