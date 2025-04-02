@@ -2,7 +2,7 @@
 title: Deploy with Portainer
 ---
 
-# 🚢 Deploying DMB with Portainer
+## 🚢 Deploying DMB with Portainer
 
 Portainer provides a user-friendly web interface for managing Docker containers and stacks. This guide walks you through deploying **Debrid Media Bridge (DMB)** using Portainer's stack deployment feature.
 
