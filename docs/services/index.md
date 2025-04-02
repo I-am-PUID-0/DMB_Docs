@@ -118,6 +118,8 @@ A content fetching engine that connects to debrid services (currently Real-Debri
 ## 📎 Next Steps
 Click on any of the service names in the sidebar or below to explore how to configure and use them:
 
+- [DMB API](api.md)
+- [DMB Frontend](dmb-frontend.md)
 - [pgAdmin 4](pgadmin.md)
 - [PostgreSQL](postgres.md)
 - [rclone](rclone.md)
