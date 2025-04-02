@@ -17,6 +17,7 @@ nav:
       - Installation: getting-started/installation.md
   - Services:
       - Overview: services/index.md
+      - DMB API: services/api.md
       - DMB Frontend: services/dmb-frontend.md
       - pgAdmin: services/pgadmin.md
       - Postgres: services/postgres.md

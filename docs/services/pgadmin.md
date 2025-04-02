@@ -8,11 +8,44 @@ pgAdmin 4 is a web-based administration tool for managing PostgreSQL databases. 
 
 ---
 
+## ⚙️ Configuration Settings in `dmb_config.json`
+```json
+"pgadmin": {
+    "enabled": true,
+    "process_name": "pgAdmin4",
+    "config_dir": "/pgadmin/data",
+    "config_file": "/pgadmin/data/config_local.py",
+    "log_file": "/pgadmin/data/pgadmin4.log",
+    "port": 5050,
+    "default_server": "0.0.0.0",
+    "setup_email": "DMB@DMB.DMB",
+    "setup_password": "postgres",
+    "command": []
+},
+```    
+
+### 🔍 Configuration Key Descriptions
+- **`enabled`**: Whether to start the pgAdmin service.
+- **`process_name`**: The label used in logs and process tracking.
+- **`config_dir`** – Directory where pgAdmin configuration files are stored.
+- **`config_file`** – Path to the primary pgAdmin configuration file.
+- **`port`**: Port exposed for the pgAdmin.
+- **`default_server`**: IP address pgAdmin should bind to. 
+
+    !!! note "`0.0.0.0` allows access to pgAdmin from all addresses"
+
+- **`setup_email`**: The email address to be used with pgAdmin.
+- **`setup_password`**: The password to be used with pgAdmin. 
+- **`command`** – The command used to start pgAdmin.
+
 ## 🚪 Accessing pgAdmin
-- Navigate to: `http://<host>:5050`
+- Navigate to: `http://<host>:<port>` 
+    - default port `5055`
 - Login using the credentials set via environment variables:
-  - `PGADMIN_SETUP_EMAIL` (default: `DMB@DMB.DMB`)
-  - `PGADMIN_SETUP_PASSWORD` (default: `postgres`)
+  - `PGADMIN_SETUP_EMAIL` 
+    - default: `DMB@DMB.DMB`
+  - `PGADMIN_SETUP_PASSWORD` 
+    - default: `postgres`
 
 !!! tip "The email is used as the username. It does not need to be a real email address."
 

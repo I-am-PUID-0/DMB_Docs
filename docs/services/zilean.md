@@ -7,46 +7,44 @@ Zilean is a service that enables users to search for content sourced by DebridMe
 Below is a sample configuration for Zilean within the `dmb_config.json` file:
 
 ```json
-{
-  "zilean": {
-    "enabled": true,
-    "process_name": "Zilean",
-    "repo_owner": "iPromKnight",
-    "repo_name": "zilean",
-    "release_version_enabled": false,
-    "release_version": "v3.3.0",
-    "branch_enabled": false,
-    "branch": "main",
-    "suppress_logging": false,
-    "log_level": "INFO",
-    "host": "127.0.0.1",
-    "port": 8182,
-    "auto_update": false,
-    "auto_update_interval": 24,
-    "clear_on_update": true,
-    "exclude_dirs": ["/zilean/app/data"],
-    "env_copy": {
-      "source": "/zilean/app/data/.env",
-      "destination": "/zilean/app/src/.env"
-    },
-    "platforms": ["python", "dotnet"],
-    "command": ["/zilean/app/zilean-api"],
-    "config_dir": "/zilean",
-    "config_file": "/zilean/app/data/settings.json",
-    "env": {
-      "DOTNET_RUNNING_IN_CONTAINER": "true",
-      "DOTNET_gcServer": "1",
-      "DOTNET_GCDynamicAdaptationMode": "1",
-      "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT": "false",
-      "PYTHONUNBUFFERED": "1",
-      "ASPNETCORE_URLS": "http://+:{port}",
-      "PYTHONPATH": "/zilean/venv/lib/python3.11/site-packages",
-      "PATH": "/zilean/venv/bin:${PATH}",
-      "ZILEAN_PYTHON_PYLIB": "/usr/local/lib/libpython3.11.so.1.0",
-      "Zilean__Database__ConnectionString": "Host={postgres_host};Port={postgres_port};Database=zilean;Username={postgres_user};Password={postgres_password};Timeout=300;CommandTimeout=3600;"
-    }
+"zilean": {
+  "enabled": true,
+  "process_name": "Zilean",
+  "repo_owner": "iPromKnight",
+  "repo_name": "zilean",
+  "release_version_enabled": false,
+  "release_version": "v3.3.0",
+  "branch_enabled": false,
+  "branch": "main",
+  "suppress_logging": false,
+  "log_level": "INFO",
+  "host": "127.0.0.1",
+  "port": 8182,
+  "auto_update": false,
+  "auto_update_interval": 24,
+  "clear_on_update": true,
+  "exclude_dirs": ["/zilean/app/data"],
+  "env_copy": {
+    "source": "/zilean/app/data/.env",
+    "destination": "/zilean/app/src/.env"
+  },
+  "platforms": ["python", "dotnet"],
+  "command": ["/zilean/app/zilean-api"],
+  "config_dir": "/zilean",
+  "config_file": "/zilean/app/data/settings.json",
+  "env": {
+    "DOTNET_RUNNING_IN_CONTAINER": "true",
+    "DOTNET_gcServer": "1",
+    "DOTNET_GCDynamicAdaptationMode": "1",
+    "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT": "false",
+    "PYTHONUNBUFFERED": "1",
+    "ASPNETCORE_URLS": "http://+:{port}",
+    "PYTHONPATH": "/zilean/venv/lib/python3.11/site-packages",
+    "PATH": "/zilean/venv/bin:${PATH}",
+    "ZILEAN_PYTHON_PYLIB": "/usr/local/lib/libpython3.11.so.1.0",
+    "Zilean__Database__ConnectionString": "Host={postgres_host};Port={postgres_port};Database=zilean;Username={postgres_user};Password={postgres_password};Timeout=300;CommandTimeout=3600;"
   }
-}
+},
 ```
 
 ### 🔍 Configuration Key Descriptions

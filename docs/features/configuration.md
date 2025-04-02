@@ -55,6 +55,7 @@ Each section configures a specific service. Below is a detailed breakdown of the
 - **puid** / **pgid** – Define the user and group IDs for container execution.
 - **tz** – Set the timezone (e.g., `America/New_York`).
 
+!!! warning "(puid/pgid cannot be set to `0`, aka root)"
 ---
 
 ## 📜 Logging Settings
@@ -76,85 +77,56 @@ Located in `dmb`:
 
 ---
 
-## 📡 API Service Configuration
-Located in `dmb.api_service`:
+## 🔐 Integration Tokens & Credentials
+Located in the `dmb` section of `dmb_config.json`:
+
 ```json
-"enabled": true,
-"process_name": "DMB API",
-"log_level": "INFO",
-"host": "127.0.0.1",
-"port": 8000
+"plex_token": "",
+"plex_address": "",
+"github_token": "",
+"github_username": ""
 ```
 
-- **enabled** – Whether the API service should run.
-- **host** / **port** – Define where the API service runs.
-- **log_level** – Logging verbosity for the API.
+### 🔄 Plex Integration
+- **`plex_token`** – This token is used by Riven backend for interacting with your Plex account. It allows features such as using watchlists and sending library scan requests to the Plex server.
+- **`plex_address`** – The internal or external URL of your Plex server (e.g., `http://127.0.0.1:32400`).
+
+These values are used automatically by Riven when setting up the [Riven Backend](../services/riven-backend.md).
 
 ---
 
-## 🌍 Frontend Configuration
-Located in `dmb.frontend`:
-```json
-"enabled": true,
-"process_name": "DMB Frontend",
-"repo_owner": "nicocapalbo",
-"repo_name": "dmbdb",
-"port": 3005,
-"auto_update": false,
-"clear_on_update": true
-```
+### 🧬 GitHub Integration
+- **`github_token`** – Used to increase GitHub API rate limits and unlock access to private/sponsored repositories such as [`zurg`](https://github.com/debridmediamanager/zurg) when associated with your GitHub account.
+- **`github_username`** – (Reserved for future use) Will support additional GitHub-sourced services and contributor personalization.
 
-- **repo_owner/repo_name** – Defines where the frontend is pulled from.
-- **port** – The port where the frontend runs.
-- **auto_update** – Enables automatic updates.
-- **clear_on_update** – Clears existing files before updating.
+To create a GitHub token:
+
+1. Go to [GitHub Developer Settings → Tokens (Classic)](https://github.com/settings/tokens)
+2. Click **Generate new token (classic)**
+3. Set an expiration and enable the following scopes:
+   - `public_repo`
+   - (Optional) `read:packages` if you plan to access private package registries
+4. Click **Generate token** and **copy the token** — it will only be shown once
+5. Add the token to your `.env` file or docker compose with `DMB_GITHUB_TOKEN=`, or `dmb_config.json` under `"github_token"`
 
 ---
 
-## 🗄️ Database: PostgreSQL
-Located in `postgres`:
-```json
-"enabled": true,
-"host": "127.0.0.1",
-"port": 5432,
-"user": "DMB",
-"password": "postgres",
-"shared_buffers": "128MB",
-"max_connections": 100
-```
+## 🔌 Service Configuration
 
-- **user/password** – Default database credentials.
-- **shared_buffers** – Amount of memory allocated to PostgreSQL.
-- **max_connections** – Maximum simultaneous database connections.
+Each DMB-integrated service is configured within its own section of `dmb_config.json`.
 
----
+See the individual service pages for in-depth configuration details:
 
-## ⚙️ Zilean Configuration
-Located in `zilean`:
-```json
-"enabled": true,
-"process_name": "Zilean",
-"port": 8182,
-"auto_update": false,
-"config_dir": "/zilean",
-"env": {
-    "DOTNET_RUNNING_IN_CONTAINER": "true",
-    "DOTNET_gcServer": "1",
-    "DOTNET_GCDynamicAdaptationMode": "1",
-    "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT": "false",
-    "PYTHONUNBUFFERED": "1",
-    "ASPNETCORE_URLS": "http://+:{port}",
-    "PYTHONPATH": "/zilean/venv/lib/python3.11/site-packages",
-    "PATH": "/zilean/venv/bin:${PATH}",
-    "ZILEAN_PYTHON_PYLIB": "/usr/local/lib/libpython3.11.so.1.0",
-    "Zilean__Database__ConnectionString": "Host={postgres_host};Port={postgres_port};Database=zilean;Username={postgres_user};Password={postgres_password};Timeout=300;CommandTimeout=3600;"
-}
-```
+- [DMB API](../services/api.md)
+- [DMB Frontend](../services/dmb-frontend.md)
+- [pgAdmin 4](../services/pgadmin.md)
+- [PostgreSQL](../services/postgres.md)
+- [rclone](../services/rclone.md)
+- [Riven Backend](../services/riven-backend.md)
+- [Riven Frontend](../services/riven-frontend.md)
+- [Zilean](../services/zilean.md)
+- [Zurg](../services/zurg.md)
 
-- **port** – API port for Zilean.
-- **env** – Defines environment variables used by Zilean.
-
----
 
 ## 📌 Next Steps
 1. Review and modify `dmb_config.json` as needed.

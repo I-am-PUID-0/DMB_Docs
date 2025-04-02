@@ -6,14 +6,6 @@ DMB handles automatic installation and updates of the frontend, including versio
 
 ---
 
-## 🌐 Access
-- **Default Port:** `3001`
-- Navigate to: `http://<host>:3001`
-
-> 🔐 If using a reverse proxy, ensure the `ORIGIN` environment variable matches the external URL.
-
----
-
 ## ⚙️ Configuration Settings in `dmb_config.json`
 
 ```json
@@ -42,7 +34,7 @@ DMB handles automatic installation and updates of the frontend, including versio
     "PORT": "{port}",
     "HOST": "{host}"
   }
-}
+},
 ```
 
 ### 🔍 Configuration Key Descriptions
@@ -80,8 +72,16 @@ You can control which version or branch of the frontend is deployed by setting:
 
 ---
 
+## 🌐 Access
+- Navigate to: `http://<host>:<port>` 
+    - default port `3001`
+
+!!! note "🔐 If using a reverse proxy, ensure the `ORIGIN` environment variable matches the external URL."
+
+---
+
 ## 🧠 Tips
-- The frontend depends on the backend being reachable at `http://<host>:8080`
+- The frontend depends on the backend being reachable at `http://<host>:<port>` defined in the `dmb_config.json` for the [Riven Backend](../services/riven-backend.md)
 - Use Docker port mappings if needed to expose the frontend
 - Check `PORT` and `ORIGIN` values if the UI fails to load
 

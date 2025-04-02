@@ -5,49 +5,45 @@ The **Riven Backend** is the core component responsible for data handling, autom
 
 ## Configuration Settings in `dmb_config.json`
 
-Below is a sample configuration for the Riven Backend:
-
 ```json
-{
-    "riven_backend": {
-        "enabled": true,
-        "process_name": "Riven Backend",
-        "repo_owner": "rivenmedia",
-        "repo_name": "riven",
-        "release_version_enabled": false,
-        "release_version": "v0.20.1",
-        "branch_enabled": false,
-        "branch": "release-please--branches--main",
-        "suppress_logging": false,
-        "log_level": "INFO",
-        "host": "127.0.0.1",
-        "port": 8080,
-        "auto_update": false,
-        "auto_update_interval": 24,
-        "symlink_library_path": "/mnt",
-        "clear_on_update": true,
-        "exclude_dirs": [
-            "/riven/backend/data"
-        ],
-        "env_copy": {
-            "source": "/riven/backend/data/.env",
-            "destination": "/riven/backend/src/.env"
-        },
-        "platforms": [
-            "python"
-        ],
-        "command": [
-            "/riven/backend/venv/bin/python",
-            "src/main.py",
-            "-p",
-            "{port}"
-        ],
-        "config_dir": "/riven/backend",
-        "config_file": "/riven/backend/data/settings.json",        
-        "env": {},
-        "wait_for_dir": "/data/rclone_RD/__all__"
+"riven_backend": {
+    "enabled": true,
+    "process_name": "Riven Backend",
+    "repo_owner": "rivenmedia",
+    "repo_name": "riven",
+    "release_version_enabled": false,
+    "release_version": "v0.20.1",
+    "branch_enabled": false,
+    "branch": "release-please--branches--main",
+    "suppress_logging": false,
+    "log_level": "INFO",
+    "host": "127.0.0.1",
+    "port": 8080,
+    "auto_update": false,
+    "auto_update_interval": 24,
+    "symlink_library_path": "/mnt",
+    "clear_on_update": true,
+    "exclude_dirs": [
+        "/riven/backend/data"
+    ],
+    "env_copy": {
+        "source": "/riven/backend/data/.env",
+        "destination": "/riven/backend/src/.env"
     },
-}
+    "platforms": [
+        "python"
+    ],
+    "command": [
+        "/riven/backend/venv/bin/python",
+        "src/main.py",
+        "-p",
+        "{port}"
+    ],
+    "config_dir": "/riven/backend",
+    "config_file": "/riven/backend/data/settings.json",        
+    "env": {},
+    "wait_for_dir": "/data/rclone_RD/__all__"
+},
 ```
 
 ### 🔍 Configuration Key Descriptions

@@ -4,35 +4,31 @@ The **DMB Frontend** is a web-based user interface designed to enhance the manag
 
 ## ⚙️ Configuration Settings in `dmb_config.json`
 
-To integrate the DMB Frontend into your setup, you can add the following configuration to your `dmb_config.json` file:
-
 ```json
-{
-    "frontend": {
-        "enabled": true,
-        "process_name": "DMB Frontend",
-        "repo_owner": "nicocapalbo",
-        "repo_name": "dmbdb",
-        "release_version_enabled": false,
-        "release_version": "v1.2.0",
-        "branch_enabled": false,
-        "branch": "main",
-        "suppress_logging": false,
-        "log_level": "INFO",            
-        "origins": [
-            "http://0.0.0.0:3005"
-        ],
-        "host": "0.0.0.0",
-        "port": 3005,            
-        "auto_update": false,
-        "auto_update_interval": 24,
-        "clear_on_update": true,
-        "exclude_dirs": [],
-        "platforms": ["pnpm"],
-        "command": ["node",".output/server/index.mjs"],
-        "config_dir": "/dmb/frontend",
-        "env": {}            
-    }
+"frontend": {
+    "enabled": true,
+    "process_name": "DMB Frontend",
+    "repo_owner": "nicocapalbo",
+    "repo_name": "dmbdb",
+    "release_version_enabled": false,
+    "release_version": "v1.2.0",
+    "branch_enabled": false,
+    "branch": "main",
+    "suppress_logging": false,
+    "log_level": "INFO",            
+    "origins": [
+        "http://0.0.0.0:3005"
+    ],
+    "host": "0.0.0.0",
+    "port": 3005,            
+    "auto_update": false,
+    "auto_update_interval": 24,
+    "clear_on_update": true,
+    "exclude_dirs": [],
+    "platforms": ["pnpm"],
+    "command": ["node",".output/server/index.mjs"],
+    "config_dir": "/dmb/frontend",
+    "env": {}            
 }
 ```
 
@@ -51,7 +47,7 @@ To integrate the DMB Frontend into your setup, you can add the following configu
 - **`auto_update_interval`**: How often (in hours) to check for updates.
 - **`clear_on_update`**: Clears build artifacts or cache during updates.
 - **`exclude_dirs`**: Prevents specific directories from being affected by updates when using `clear_on_update`
-- **`platforms`**: Specifies the runtime environment required (`nodejs`).
+- **`platforms`**: Specifies the runtime environment required (`pnpm`).
 - **`command`**: Command to start the frontend service.
 - **`config_dir`**: Directory where configuration files are stored.
 - **`env`**: Environment variables for the frontend.
@@ -65,6 +61,10 @@ You can control which version or branch of the frontend is deployed by setting:
 - or `release_version_enabled: true` and specifying a `release_version`
 
 ---
+
+## 🚪 Accessing the DMB Frontend
+- Navigate to: `http://<host>:<port>`
+    - default port `3005`
 
 ## 📸 User Interface Overview
 

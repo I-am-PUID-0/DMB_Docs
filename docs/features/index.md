@@ -22,7 +22,7 @@ DMB integrates the following projects to create a seamless media experience:
 [Riven](https://github.com/rivenmedia/riven) is responsible for content management, handling **search queries, downloading, and organizing media** for streaming.
 
 ### 🤖 **Zurg**  
-[Zurg](https://github.com/debridmediamanager/zurg-testing) acts as the automation engine that interacts with **Real-Debrid and other debrid services** to fetch media files.
+[Zurg](https://github.com/debridmediamanager/zurg-testing) acts as the automation engine that interacts with **Real-Debrid** to fetch media files.
 
 ### 🗂️ **Zilean**  
 [Zilean](https://github.com/iPromKnight/zilean) enhances content discovery and caching, optimizing the efficiency of media lookups.

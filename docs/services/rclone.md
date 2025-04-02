@@ -4,7 +4,7 @@ rclone is a command-line tool used in DMB to mount cloud storage—specifically 
 
 ---
 
-## ⚙️ Configuration Summary
+## ⚙️ Configuration Settings in `dmb_config.json`
 Each `rclone` instance is defined under the `rclone.instances` section in `dmb_config.json`. Example:
 ```json
 "rclone": {
@@ -26,7 +26,7 @@ Each `rclone` instance is defined under the `rclone.instances` section in `dmb_c
       "api_key": ""
     }
   }
-}
+},
 ```
 
 ### 🔍 Configuration Key Descriptions
