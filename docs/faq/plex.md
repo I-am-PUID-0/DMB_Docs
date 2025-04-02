@@ -26,8 +26,28 @@ These settings reduce the number of filesystem scans Plex performs, which can ot
 
 ---
 
+### ⚠️ Plex buffers a lot when playing content mounted via rclone
+This is often caused by the lack of caching when streaming large files from cloud-mounted storage.
+
+#### ✅ Recommended Solution
+Enable **VFS (Virtual File System) cache** in your `rclone` configuration.
+
+When using DMB, set the following environment variables:
+```bash
+RCLONE_VFS_CACHE_MODE=full
+RCLONE_VFS_CACHE_MAX_SIZE=100G
+RCLONE_VFS_CACHE_MAX_AGE=6h
+```
+
+These flags ensure that:
+- The full file is cached locally before playback.
+- Plex can smoothly read data without constant remote fetches.
+
+> See [rclone docs](https://rclone.org/docs/#environment-variables)  
+> or refer to [rclone Flags via Environment Variables](../services/rclone.md#-rclone-flags-via-environment-variables) for examples and formatting guidance.
+
+
 ## 📎 Related Pages
 - [Zurg FAQ](../faq/zurg.md)
 - [Rclone Configuration](../services/rclone.md)
-- [Riven Symlink Strategy](../services/riven-backend.md#symlink-directory)
 
