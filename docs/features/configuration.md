@@ -130,4 +130,5 @@ See the individual service pages for in-depth configuration details:
 
 ## 📌 Next Steps
 1. Review and modify `dmb_config.json` as needed.
-2. For a deep dive into individual services, see the [Services](../services/index.md) section.
+2. Review the [Usage](usage.md) page. 
+3. For a deep dive into individual services, see the [Services](../services/index.md) section.

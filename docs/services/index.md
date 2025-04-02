@@ -52,6 +52,23 @@ DMB is built as a collection of microservices, each fulfilling a specific role i
 
 ## 🧱 Core Service Summaries
 
+### 🔌 DMB API
+Handles coordination and exposes endpoints for frontend/backend communication.
+
+- Default Port: `8000`
+- Default Host: `127.0.0.1`
+- Logs: Stored in `/log`
+
+---
+
+### 🖥️ DMB Frontend
+Provides a web interface to monitor logs, update configurations, and control services within DMB.
+
+- Default Port: `3005`
+- Repo: `nicocapalbo/dmbdb`
+
+---
+
 ### 📊 pgAdmin 4
 A web-based UI for managing PostgreSQL databases. Automatically configured to connect to the PostgreSQL instance used by DMB.
 

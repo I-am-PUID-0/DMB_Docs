@@ -36,6 +36,7 @@ nav:
   - FAQ: 
       - DMB: faq/dmb.md
       - pgAdmin: faq/pgadmin.md
+      - Plex: faq/plex.md
       - Postgres: faq/postgres.md
       - rclone: faq/rclone.md
       - Riven: faq/riven.md
