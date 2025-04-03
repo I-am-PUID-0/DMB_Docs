@@ -68,7 +68,7 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.code.annotate
+    - content.code.annotate 
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -86,6 +86,10 @@ theme:
 extra:
   generator: false
 
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js
+  - assets/js/zoom.js
+  
 extra_css:
   - assets/css/main.css
 
@@ -119,7 +123,7 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.tilde
   - pymdownx.mark
-  - pymdownx.keys
+  - pymdownx.keys 
   - markdown.extensions.toc:
       slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
       permalink: "#"  
