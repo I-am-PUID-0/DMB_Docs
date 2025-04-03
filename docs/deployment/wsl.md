@@ -68,6 +68,57 @@ title: Deploy with WSL
 
 6. Follow the remaining prompted steps
 
+
+### 🌐 Mirrored Mode Networking
+
+Starting with **Windows 11 22H2**, WSL2 supports a new networking mode called **mirrored networking**, which improves compatibility and unlocks several new features by mirroring Windows' network interfaces into Linux.
+
+#### ✅ Benefits of Mirrored Networking
+
+- 🧭 Full **IPv6** support  
+- 🔁 Access **Windows services** from WSL using `127.0.0.1`  
+- 🔒 Improved VPN support (VPNs work in both Windows and WSL)  
+- 📡 Multicast compatibility  
+- 🧷 Reach WSL directly from your **local LAN**
+
+---
+
+#### 🔧 Enabling Mirrored Mode
+
+1. Open (or create) the `.wslconfig` file in your Windows home directory:
+
+```powershell
+notepad $env:USERPROFILE\.wslconfig
+```
+
+2. Add the following section:
+
+```ini
+[wsl2]
+networkingMode=mirrored
+```
+
+3. Restart WSL for the changes to take effect:
+
+```bash
+wsl --shutdown
+```
+
+Then restart your distro from the Windows menu or run:
+
+```bash
+wsl
+```
+
+---
+
+#### 📌 Additional Notes
+
+- You can combine this with [`autoProxy=true`](https://learn.microsoft.com/en-us/windows/wsl/wsl-config#configuration-settings-for-wslconfig) if you're using a proxy.
+- This setting applies globally across all WSL2 instances.
+
+
+
 ### 🌟 Extra Credit
 
 1. install **[Portainer](https://docs.portainer.io/start/install-ce/server/docker/linux)**
