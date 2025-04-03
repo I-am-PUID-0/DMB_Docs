@@ -32,6 +32,10 @@ nav:
       - Portainer: deployment/portainer.md 
       - Unraid: deployment/unraid.md     
       - WSL: deployment/wsl.md
+      - Synology: deployment/synology.md
+      - QNAP: deployment/qnap.md
+      - TrueNAS: deployment/truenas.md
+      - Dockge: deployment/dockge.md
   - API Reference:
       - Endpoints: api/endpoints.md      
   - FAQ: 
