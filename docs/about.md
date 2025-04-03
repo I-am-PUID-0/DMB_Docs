@@ -1,5 +1,7 @@
 ---
 title: About
+hide:
+  - navigation
 ---
 
 ## 📦 About DMB (Debrid Media Bridge)
@@ -62,7 +64,7 @@ You can help by:
 
 !!! note "DMB does **not** accept donations — but your support and involvement are deeply appreciated!"
 
-See the [Contributing Guide](../contributing.md) for more details.
+See the [Contributing Guide](contributing.md) for more details.
 
 ---
 

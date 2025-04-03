@@ -1,5 +1,7 @@
 ---
 title: Contributing
+hide:
+  - navigation
 ---
 
 ## 🤝 Contributing to DMB

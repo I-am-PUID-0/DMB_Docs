@@ -16,8 +16,14 @@ jobs:
 
       - name: Fetch Changelog
         run: |
-          curl --fail --show-error -o docs/changelog.md https://raw.githubusercontent.com/I-am-PUID-0/DMB/master/CHANGELOG.md
-
+          {
+            echo '---'
+            echo 'hide:'
+            echo '  - navigation'
+            echo '---'
+            echo ''
+            curl --fail --show-error https://raw.githubusercontent.com/I-am-PUID-0/DMB/master/CHANGELOG.md
+          } > docs/changelog.md
 
       - name: Commit and Push Changes
         env:
