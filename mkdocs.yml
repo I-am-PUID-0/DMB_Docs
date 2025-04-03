@@ -86,9 +86,9 @@ theme:
 extra:
   generator: false
 
-extra_javascript:
-  - https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js
-  - assets/js/zoom.js
+#extra_javascript:
+#  - https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js
+#  - assets/js/zoom.js
   
 extra_css:
   - assets/css/main.css
