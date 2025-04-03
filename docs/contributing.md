@@ -24,7 +24,7 @@ The easiest way to contribute code is through the **DMB Dev Container**, which i
 - Port forwarding for common services
 - Preconfigured workspace mounts
 
-You can find the [devcontainer setup file](https://github.com/I-am-PUID-0/DMB/tree/master/.devcontainer/devcontainer.json) in the root of the repo.
+You can find the [devcontainer setup file](https://github.com/I-am-PUID-0/DMB/tree/master/.devcontainer/devcontainer.json) in the repo.
 
 ### How to Get Started
 
