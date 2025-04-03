@@ -27,6 +27,7 @@ nav:
       - Zilean: services/zilean.md
       - Zurg: services/zurg.md
   - Deployment:
+      - Overview: deployment/index.md
       - Docker: deployment/docker.md
       - Portainer: deployment/portainer.md 
       - Unraid: deployment/unraid.md     

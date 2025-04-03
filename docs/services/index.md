@@ -97,7 +97,7 @@ Used to mount remote cloud storage (such as Real-Debrid WebDAV) into the contain
 ---
 
 ### 🧠 Riven Backend
-Handles media tracking, search, download orchestration, and integration with Plex, Trakt, and Overseerr.
+Handles media tracking, search, download orchestration, and integration with Plex, Trakt, Overseerr, and others.
 
 - Default Port: `8080`
 - Config File: `/riven/backend/data/settings.json`
@@ -115,7 +115,7 @@ Web interface for controlling and monitoring the Riven backend.
 ---
 
 ### 🧠 Zilean
-Caches metadata and hash lookups to reduce repeat requests for the same content. Written in .NET and Python.
+Caches metadata and hash lookups to reduce repeat requests for the same content.
 
 - Default Port: `8182`
 - Config File: `/zilean/app/data/settings.json`

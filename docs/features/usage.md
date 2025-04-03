@@ -30,14 +30,18 @@ If a service fails to start, check its log file in the `/log` directory (or wher
 ## 🔃 Managing Updates
 
 ### 🛠️ Manual Updates
-Each service can be updated by modifying the configuration file or using the DMB API. Updates include:
+Each service can be updated by modifying the configuration file or using the [DMB Frontend](../services/dmb-frontend.md). 
+
+Updates include:
 
 - Branch switching
 - Version pinning
 - Auto-update toggling
 
 ### ⚙️ Auto-Update
-Some services support automatic updates. Enable by setting:
+Some services support automatic updates. 
+
+Enable by setting:
 ```json
 "auto_update": true,
 "auto_update_interval": 24
@@ -55,7 +59,10 @@ Services supporting auto-updates:
 ---
 
 ## ⚡ Shutdown Handling
-DMB handles graceful shutdown of all services. This includes:
+DMB handles graceful shutdown of all services. 
+
+This includes:
+
 - Stopping running processes
 - Unmounting rclone mounts
 - Syncing configuration states

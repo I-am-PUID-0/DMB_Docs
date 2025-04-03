@@ -15,6 +15,12 @@ DMB also supports **environment variables, .env files, and Docker secrets**. If 
 4. **`dmb_config.json`** (lowest priority)
 
 ## 🛠️ Configuration File Structure
+
+!!! caution "Be Careful When Modifying `dmb_config.json`"
+    While DMB is highly configurable via `dmb_config.json`,  
+    some changes can cause failures during startup.  
+    As such, it is **not recommended** to make modifications unless you fully understand their impact.
+    
 Below is the **general structure** of `dmb_config.json`:
 
 ```json
@@ -33,13 +39,9 @@ Below is the **general structure** of `dmb_config.json`:
 }
 ```
 
-Each section configures a specific service. Below is a detailed breakdown of the most important sections:
+Each section configures a specific service.
 
-!!! caution "Be Careful When Modifying `dmb_config.json`"
-    While DMB is highly configurable via `dmb_config.json`,  
-    some changes can cause failures during startup.  
-    As such, it is **not recommended** to make modifications unless you fully understand their impact.
-
+Below is a breakdown of some of the sections:
 
 ---
 

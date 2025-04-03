@@ -3,8 +3,14 @@
 Below are some common questions and solutions related to using **rclone** with **DMB**.
 
 ---
+
 ## ❓ Frequently Asked Questions (FAQ)
 
+### I think I might be rate limited by the debrid service - seeing `423` errors.
+
+Add `- RCLONE_TSP_LIMIT=10` to the environment variable section of the compose.
+
+---
 
 ### How do I enable rclone filtering to include only specific resolutions? 
 
@@ -49,7 +55,7 @@ Add `- RCLONE_FILTER_FROM=/config/filter_exclude_2160.txt` to the environment va
 + *
 ```
 
-
+---
 
 ### Error response from daemon: path `/your/host/path/mnt` is mounted on `/` but it is not a shared mount.
 
