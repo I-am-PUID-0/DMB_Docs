@@ -36,8 +36,13 @@ nav:
       - QNAP: deployment/qnap.md
       - TrueNAS: deployment/truenas.md
       - Dockge: deployment/dockge.md
-  - API Reference:
-      - Endpoints: api/endpoints.md      
+  - API:
+      - Overview: api/index.md
+      - Health: api/health.md
+      - Process Management: api/process.md
+      - Configuration: api/config.md
+      - Logs: api/logs.md
+      - Real-Time WebSocket Logs: api/websocket_logs.md
   - FAQ: 
       - DMB: faq/dmb.md
       - pgAdmin: faq/pgadmin.md

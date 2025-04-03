@@ -47,7 +47,7 @@ DMB is built using a **modular, microservices** architecture, with the following
 | **Zilean**        | Caches metadata and file hash lookups for performance |
 | **PostgreSQL / pgAdmin** | Internal databases and optional management UI |
 
-You can explore how these services connect in the [Services Overview](../services/index.md) page.
+You can explore how these services connect in the [Services Overview](services/index.md) page.
 
 ---
 

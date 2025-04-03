@@ -86,4 +86,4 @@ docker-compose:
 ## 📎 Related Docs
 - [Configuration](configuration.md)
 - [Services Overview](../services/index.md)
-- [API Endpoints](../api/endpoints.md)
+- [API](../api/index.md)
