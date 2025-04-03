@@ -81,14 +81,62 @@ You can control which version or branch of the backend is deployed by setting:
 
 ---
 
-## 🛠️ Setting Up Riven Backend
+## ⚙️ Initial Setup: Riven Backend
 
-Riven Backend is the only service which will require additional setup before use.
+Before Riven Backend can be used, **initial configuration is required**.
 
-Item 
+After starting DMB, navigate to the **Riven Frontend** and open the `Settings` page. The following sections should be reviewed and updated:
+
+### 🔧 Required Configuration
+At a minimum, **enable at least one Content source** under the `Content` section. Without this, Riven cannot function.
+
+### 🧩 Recommended Setup Areas
+- **General** – Adjust base settings like min/max files size, etc.
+- **Media Server** – Add your Plex, Jellyfin, or Emby server details for library syncing.
+- **Content** – Configure sources such as Trakt, Overseerr, or the Plex Watchlist, MDB List, Listrr.
+- **Scrapers** – Enable one or more scrapers (e.g., Zilean, Torrentio, Knightcrawler, Orionoid, Jackett, Mediafusion, Prowlarr, Comet).
+- **Ranking** – Customize how results are scored and filtered.
+
+!!! note "📝 Once complete, Riven will begin processing requests based on the selected sources and configurations."
 
 ---
 
+## 🧵 Symlink Mounts & Media Server Integration
+
+One of the most common issues when setting up DMB with your **Media Server (Plex, Jellyfin, or Emby)** is improper **path mapping** between containers. Since **Riven creates symlinks** to Zurg-mounted content, the following paths must be shared **identically across containers**.
+
+In your Docker or Compose setup for both DMB and your Media Server container, ensure the following:
+
+### ✅ Example: Correct Volume Mapping
+
+```yaml
+# rclone/Zurg mount from DMB container
+- /home/username/docker/DMB/Zurg/mnt:/data
+
+# Riven symlink mount from DMB container
+- /home/username/docker/DMB/Riven/mnt:/mnt
+```
+
+In this case:
+
+- `/data` is the mount point used by `rclone` and `Zurg` **inside** the DMB container.
+- `/mnt` is where Riven places cleaned-up symlinks to that content.
+- These **container-side paths (`:/data`, `:/mnt`) must be the same** in your media server container.
+
+!!! note "📌 *The host path (`/home/username/docker/...`) can differ—it’s the container paths that must match.*"
+
+---
+
+### 🔁 Why This Matters
+
+- Riven creates symlinks in `/mnt` that **point to files inside `/data`** (or your configured `mount_dir`).
+- If the Media Server doesn’t share these exact mount paths, the symlinks will **break or point to invalid locations**.
+- Avoid adding `/data` to your media library — instead, add `/mnt` to ensure only cleaned and processed content is indexed.
+
+!!! tip "✅ **Best Practice:**" 
+    Use the same mount paths across DMB and Media Server containers — even if the host paths differ.
+
+---
 
 ## Riven's Environment Variables in the `.env.example`
 
