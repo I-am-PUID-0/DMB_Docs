@@ -10,7 +10,9 @@ Thank you for your interest in contributing to **Debrid Media Bridge (DMB)**!
 
 We welcome all forms of contributions — not just code.
 
-DMB is an open-source, community-driven project. Whether you're a developer, power user, or just someone passionate about improving media automation, your help is always appreciated!
+DMB is an open-source, community-driven project. 
+
+Whether you're a developer, power user, or just someone passionate about improving media automation, your help is always appreciated!
 
 ---
 
@@ -68,7 +70,9 @@ While the gesture is genuinely appreciated, **your involvement is far more valua
 ## 🛣️ Roadmap & Feedback
 
 If you have ideas, feature requests, or feedback:
+
 - Create a [GitHub Issue](https://github.com/I-am-PUID-0/DMB/issues)
+
 - Discuss in the community before starting larger PRs
 
 ---

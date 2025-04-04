@@ -89,8 +89,8 @@ You can control which version or branch of Zilean is deployed by setting:
 ---
 
 ## 🧠 Tips
-- Zilean uses both Python and .NET, so startup may take a few seconds.
-- Logs from Zilean can be accessed via DMB’s unified log API or directly from `/log/zilean.log`.
+- The first-time run of Zilean can take a long time; see the [Zilean FAQ](../faq/zilean.md#why-is-zilean-spamming-my-logs) for more info.
+- Logs from Zilean can be accessed via DMB’s Frontend or directly from `/log/zilean.log`.
 - If Zilean fails to bind, check for existing services on port `8182`.
 - Use the `clear_on_update` and `exclude_dirs` settings to preserve persistent data.
 

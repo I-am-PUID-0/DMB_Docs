@@ -80,9 +80,9 @@ curl -O https://raw.githubusercontent.com/I-am-PUID-0/DMB/master/docker-compose.
 sed -i "s|/home/username/docker/DMB|$HOME/docker/DMB|g" docker-compose.yml
 ```
 
-3. Run the following command to update the PUID/PGID in the `docker-compose.yml`
+3. Run the following command to update the `docker-compose.yml`
 !!! note "timezone"
-    The bellow command defaults to `TZ=UTC`, update before running the command if desired
+    The bellow command defaults to `TZ=UTC`, update while running the command if desired
 
 !!! note "Riven Frontend Origin"  
     The `RIVEN_FRONTEND_ENV_ORIGIN` must be in the format `http://<IP-or-Hostname>:<port>`.  

@@ -14,18 +14,22 @@ All deployment methods provide access to the same integrated services and config
 
 ### 🐳 Docker Compose
 Quickest way to get started using Docker CLI and `docker-compose.yml`.
+
 - [Deploy with Docker](docker.md)
 
 ### 📚 Portainer
 Deploy using the Portainer web interface.
+
 - [Deploy with Portainer](portainer.md)
 
 ### 🧯 Unraid
 Deploy using the Unraid Community Applications plugin and container template.
+
 - [Deploy with Unraid](unraid.md)
 
 ### 💻 WSL2 (Windows Subsystem for Linux)
 Deploy DMB in a WSL2 environment on Windows 11.
+
 - [Deploy with WSL](wsl.md)
 
 ---

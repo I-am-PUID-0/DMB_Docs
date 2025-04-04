@@ -73,11 +73,10 @@ Zurg is configured using the `instances` model to support multiple debrid servic
 
 ---
 
-## ⚙️ Branch / Version Targeting
-You can control which version or branch of Zurg is deployed by setting:
+## ⚙️ Version Targeting
+You can control which version of Zurg is deployed by setting:
 
-- `branch_enabled: true` and specifying a `branch`
-- or `release_version_enabled: true` and specifying a `release_version`
+- `release_version_enabled: true` and specifying a `release_version`
 
 ---
 
