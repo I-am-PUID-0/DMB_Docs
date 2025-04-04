@@ -4,7 +4,9 @@ title: pgAdmin 4
 
 # pgAdmin 4
 
-pgAdmin 4 is a web-based administration tool for managing PostgreSQL databases. DMB includes pgAdmin pre-installed and configured to work out of the box, allowing you to inspect, query, and back up your databases directly from a browser.
+pgAdmin 4 is a web-based administration tool for managing PostgreSQL databases. 
+
+DMB includes pgAdmin pre-installed and configured to work out of the box, allowing you to inspect, query, and back up your databases directly from a browser.
 
 ---
 
@@ -56,8 +58,8 @@ pgAdmin 4 is a web-based administration tool for managing PostgreSQL databases. 
 ## 🔐 Server Configuration
 - pgAdmin is preconfigured with a server connection named **DMB**.
 - On first login, you must enter the password for the PostgreSQL server connection.
-  - Default password: `postgres`
-  - Or, use the value of `POSTGRES_PASSWORD` if set in your environment.
+    - Default password: `postgres`
+    - Or, use the value of `POSTGRES_PASSWORD` if set in your environment.
 
 ![Server View](../assets/images/pgadmin/pgadmin-server-view.png)
 
@@ -68,12 +70,14 @@ The following PostgreSQL extensions are included in the DMB image:
 
 ### 📈 `system_stats`
 Provides system performance statistics inside PostgreSQL.
+
 - Find it in the pgAdmin dashboard under the connected database (e.g., `pgadmin` or `riven`).
 
 ![System Stats](../assets/images/pgadmin/pgadmin-system-stats.png)
 
 ### 📅 `pgAgent`
 A job scheduler for PostgreSQL. Useful for:
+
 - Scheduling backups
 - Routine maintenance
 
@@ -81,60 +85,12 @@ A job scheduler for PostgreSQL. Useful for:
 
 ---
 
-## 💾 Example: Scheduled Backups with pgAgent
-
-1. Navigate to `pgAgent Jobs` under your connected DMB server.
-2. Right-click → `Create → pgAgent Job`
-
-    ![Create Job](../assets/images/pgadmin/pgadmin-create-job.png)
-
-3. Enter the job name and any comments you like:
-
-    ![Add Job](../assets/images/pgadmin/pgadmin-add-job.png)
-
-4. In the **Steps** tab, click the `+` button to **Add row** to the steps:
-
-    ![Add Step](../assets/images/pgadmin/pgadmin-add-step.png)
-
-5. Click the `pencil` icon to edit the new row and configure the step:
-
-    ![Edit Step](../assets/images/pgadmin/pgadmin-edit-step.png)
-
-6. Enter a step name and select `Kind` = `Batch`:
-
-    ![Step Details](../assets/images/pgadmin/pgadmin-step-details.png)
-
-7. Add backup commands to the **Code** tab:
-
-    !!! note "The following code is an example of a backup command. You may need to modify it to suit your needs."
-
-    ```sql
-    pg_dump --username=DMB --dbname=riven --clean --file=/pgadmin/data/riven_backup-`date +%Y-%m-%d-%H-%M-%S`.sql
-    pg_dump --username=DMB --dbname=zilean --clean --file=/pgadmin/data/zilean_backup-`date +%Y-%m-%d-%H-%M-%S`.sql
-    ```
-
-    ![Step Code](../assets/images/pgadmin/pgadmin-backup-step-code.png)
-
-8. Click on the **Schedules** tab to set the schedule for the backup.
-
-9. As before with the **Steps**, add a row to add a new schedule, and edit the row to configure the schedule.
-
-10. Enter the schedule name, select the **Enabled?** toggle, and set the Start and End dates for the schedule.
-
-    ![Add Schedule](../assets/images/pgadmin/pgadmin-schedule-add.png)
-
-11. On the **Repeat** tab, set the repeat frequency (e.g., daily at 12:00 AM):
-
-    ![Repeat Tab](../assets/images/pgadmin/pgadmin-schedule-repeat.png)
-
-12. Click **Save** to save the scheduled backup job.
-
-!!! tip "Backups are stored in `/pgadmin/data`."
-
----
-
 ## 📚 More Info
+
+- [pgAdmin FAQ](../faq/pgadmin.md)
+
 - [pgAdmin Docs](https://www.pgadmin.org/docs/pgadmin4/latest/index.html)
+
 - [pgAgent Job Scheduler](https://www.pgadmin.org/docs/pgadmin4/development/pgagent_jobs.html)
 
 ---

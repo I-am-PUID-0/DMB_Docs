@@ -20,7 +20,7 @@ nav:
       - DMB API: services/api.md
       - DMB Frontend: services/dmb-frontend.md
       - pgAdmin: services/pgadmin.md
-      - Postgres: services/postgres.md
+      - PostgreSQL: services/postgres.md
       - rclone: services/rclone.md
       - Riven Backend: services/riven-backend.md      
       - Riven Frontend: services/riven-frontend.md
@@ -48,7 +48,7 @@ nav:
       - DMB: faq/dmb.md
       - pgAdmin: faq/pgadmin.md
       - Plex: faq/plex.md
-      - Postgres: faq/postgres.md
+      - PostgreSQL: faq/postgres.md
       - rclone: faq/rclone.md
       - Riven: faq/riven.md
       - Zilean: faq/zilean.md

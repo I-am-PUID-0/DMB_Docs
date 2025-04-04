@@ -4,7 +4,9 @@ title: PostgreSQL
 
 # PostgreSQL
 
-PostgreSQL is the core database system used by DMB to store metadata and internal configuration for services like Riven, Zilean, and pgAdmin. It is pre-installed and automatically initialized during container startup.
+PostgreSQL is the core database system used by DMB to store metadata and internal configuration for services like Riven, Zilean, and pgAdmin. 
+
+It is pre-installed and automatically initialized during container startup.
 
 ---
 
