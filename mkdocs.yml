@@ -44,6 +44,7 @@ nav:
       - Logs: api/logs.md
       - Real-Time WebSocket Logs: api/websocket_logs.md
   - FAQ: 
+      - General: faq/general.md
       - DMB: faq/dmb.md
       - pgAdmin: faq/pgadmin.md
       - Plex: faq/plex.md
