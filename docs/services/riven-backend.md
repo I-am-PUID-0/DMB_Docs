@@ -138,6 +138,87 @@ In this case:
 
 ---
 
+
+### Host-Based Media Server: Mount Path Consistency
+
+If your media server (such as Plex) runs **directly on the host** (not in Docker), it will access media files using the host's file system. In this setup, any symlinks created inside the DMB container must resolve correctly **on the host**. This means the media paths inside the container must exactly match the paths used by the host.
+
+Symlink resolution is based on absolute paths. If those paths don't exist or don't match outside the container, the symlinks will be broken or unusable by the media server.
+
+#### Example: Riven Media Directory
+
+Suppose your media is mounted on the host at:
+
+```
+/docker/DMB/Riven/mnt
+```
+
+Since Plex (or another media server) and the DMB container need to both access this path and resolve symlinks, your Docker bind mount must look like:
+
+```yaml
+/docker/DMB/Riven/mnt:/docker/DMB/Riven/mnt
+```
+
+Then, inside the `dmb_config.json`, make sure you define:
+
+```json
+"riven": {
+  "symlink_library_path": "/docker/DMB/Riven/mnt",
+}
+```
+
+This ensures that any symlinks Riven creates will remain valid on the host.
+
+#### Example: Zurg Media Directory
+
+For media processed by Zurg and symlinked by Riven:
+
+```
+/docker/DMB/Zurg/mnt
+```
+
+Use the following bind mount:
+
+```yaml
+/docker/DMB/Zurg/mnt:/docker/DMB/Zurg/mnt:shared
+```
+
+And configure the `dmb_config.json` as follows:
+
+```json
+"rclone": {
+  "mount_dir": "/docker/DMB/Zurg/mnt",
+}
+```
+
+
+#### Simplified Approach Using Standard Paths
+
+To simplify configuration and reduce the need to hardcode deep paths, you can instead use standard directory mounts like `/mnt` and `/data`.
+
+Docker Compose example:
+
+```yaml
+/mnt:/mnt
+/data:/data:shared
+```
+
+And then update the configuration:
+
+```json
+"riven": {
+  "symlink_library_path": "/mnt",
+},
+"rclone": {
+  "mount_dir": "/data",
+}
+```
+
+Using standardized top-level paths makes your setup more portable and ensures symlinks will resolve correctly regardless of the underlying directory structure.
+
+---
+
+
 ## Riven's Environment Variables in the `.env.example`
 
 The `.env.example` file includes:
