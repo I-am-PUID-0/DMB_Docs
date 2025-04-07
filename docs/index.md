@@ -1,4 +1,5 @@
 ---
+title: Debrid Media Bridge
 hide:
   - navigation
   - toc
