@@ -106,7 +106,12 @@ To create a GitHub token:
 1. Go to [GitHub Developer Settings → Tokens (Classic)](https://github.com/settings/tokens)
 2. Click **Generate new token (classic)**
 3. Set an expiration and enable the following scopes:
-   - `repo` - select all
+
+    - `write:packages` 
+    - `read:packages`
+
+    ![GitHub Token](../assets/images/github_token_scope.png)
+    
 4. Click **Generate token** and **copy the token** — it will only be shown once
 5. Add the token to your `.env` file or docker compose with `DMB_GITHUB_TOKEN=`, or `dmb_config.json` under `"github_token"`
 
