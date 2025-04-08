@@ -58,6 +58,23 @@ The DMB API is split into the following modules:
 
 ---
 
+## 🧭 API Documentation
+
+DMB provides built-in API documentation through two convenient endpoints:
+
+- **FastAPI Swagger UI**  
+  Accessible at:  
+  `http://<host>:<port>/docs`  
+  This interface allows for interactive testing and exploring of all available REST endpoints.
+
+- **Scalar (ReDoc-style) Docs**  
+  Accessible at:  
+  `http://<host>:<port>/scalar`  
+  A clean, read-only view of the full OpenAPI schema for the DMB API.
+
+These are helpful for development, debugging, and integrating external systems with DMB.
+
+--- 
 
 ## 📚 Next Steps
 Click on any of the modules in the sidebar to explore endpoint structure, usage examples, and development guidelines for extending the DMB API:
