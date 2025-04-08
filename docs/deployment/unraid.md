@@ -2,7 +2,7 @@
 title: unRAID Deployment
 ---
 
-# Deploying DMB on unRAID
+## 🧱 Deploying DMB on unRAID
 
 This guide will walk you through deploying **Debrid Media Bridge (DMB)** on **unRAID** using the Community Applications plugin and Docker.
 

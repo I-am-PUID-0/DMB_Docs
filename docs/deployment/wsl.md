@@ -2,10 +2,12 @@
 title: Deploy with WSL
 ---
 
-## 🖥️ Windows Setup Guide (Docker/WSL)
+## 🖥️ Deploying DMB on Windows Setup Guide (Docker/WSL)
 
 !!! warning "Docker Desktop"
     Ensure that Docker Desktop is not installed; if so, uninstall and reboot before proceeding.
+
+This guide will walk you through setting up DMB on a Windows system using a **lightweight Docker + WSL2 setup**, without relying on Docker Desktop. 
 
 ----
 
@@ -121,4 +123,37 @@ wsl
 
 ### 🌟 Extra Credit
 
-1. install **[Portainer](https://docs.portainer.io/start/install-ce/server/docker/linux)**
+If you want to manage Docker visually via Portainer:
+
+1. Create the Portainer data volume:
+    ```bash
+    docker volume create portainer_data
+    ```
+
+2. Start the Portainer container:
+
+    ```bash
+    docker run -d \
+    -p 8000:8000 \
+    -p 9443:9443 \
+    --name portainer \
+    --restart=always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v portainer_data:/data \
+    portainer/portainer-ce:latest
+    ```
+
+You can now manage Docker containers via the browser at: `https://<ip>:9443`
+
+!!! note 
+    On the first run of Portainer, you need to access the Web UI quickly to create your initial administrator user, which is crucial for accessing and managing your Docker environment. 
+    
+!!! tip
+    If you can't access the UI after the initial setup, ensure the Portainer container is running and that the correct port is open. 
+    You might need to restart the container if it timed out. 
+
+For more, see the [Portainer Deployment Guide](./portainer.md).
+
+---
+
+Now you’re ready to run DMB inside WSL2 with full Docker support — no Docker Desktop required!

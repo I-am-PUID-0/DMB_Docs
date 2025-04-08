@@ -5,9 +5,9 @@ title: Deploy with Docker
 
 ## 📦 Deploying DMB with Docker
 
-Welcome to the official Docker deployment guide for **DMB (Debrid Media Bridge)** — a powerful all-in-one container designed to streamline media management using debrid services.
+This guide will walk you through every step, from installing Docker to setting up and running the DMB container. 
 
-This guide will walk you through every step, from installing Docker to setting up and running the DMB container. Whether you're new to Docker or just need a quick refresher, you'll be up and running in no time.
+Whether you're new to Docker or just need a quick refresher, you'll be up and running in no time.
 
 
 ## ✅ Prerequisites

@@ -2,9 +2,9 @@
 title: Deploying on Proxmox
 ---
 
-# 🧱 Deploying DMB on Proxmox (LXC Container)
+## 🧱 Deploying DMB on Proxmox (LXC Container)
 
-This guide walks you through deploying **DMB** inside a lightweight **Ubuntu-based LXC container** on **Proxmox VE**.
+This guide will walk you through deploying **DMB** inside a lightweight **Ubuntu-based LXC container** on **Proxmox VE**.
 
 ---
 
