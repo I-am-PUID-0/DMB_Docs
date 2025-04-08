@@ -13,25 +13,25 @@ This guide will walk you through setting up DMB on a Windows system using a **li
 
 ### 🐧 WSL Install
 
-1. From the Microsoft store, install Windows Subsystem for Linux (WSL)
+1. From the Microsoft Store, install **Windows Subsystem for Linux (WSL)**
 
-2. From the Microsoft store, install Ubuntu 22.04 LTS
+2. From the Microsoft Store, install **Ubuntu 22.04 LTS**
 
 3. Follow the setup to create your Ubuntu username and password
 
-4. From a Windows command prompt, paste the following:
+4. From a Windows Command Prompt, paste the following:
 
     ```bash
     cd C:\WINDOWS\system32
     ```
 
-5. Then paste:
+5. Then set Ubuntu 22.04 as the default distro:
 
     ```bash
     wsl --setdefault Ubuntu-22.04
     ```
 
-6. From Windows apps, start Ubuntu 22.04, and paste the following inside the terminal:
+6. From the Windows app menu, start **Ubuntu 22.04**, then paste the following inside the terminal:
 
     ```bash
     sudo apt update
@@ -39,36 +39,47 @@ This guide will walk you through setting up DMB on a Windows system using a **li
     sudo mount --make-rshared /
     ```
 
-!!! note 
-     `sudo mount --make-rshared` does not persist reboots, so it will need to be run each time WSL2 or Windows is restarted. Alternatively, see the [Ubuntu systemd service](../faq/rclone.md#ubuntu-systemd-service) guide for automatically executing the command on startup for Ubuntu.
+    !!! note
+        `sudo mount --make-rshared /` does **not** persist after reboots. You’ll need to run it each time WSL2 or Windows is restarted.  
+        
+        Alternatively, see the [Ubuntu systemd service](../faq/rclone.md#ubuntu-systemd-service) guide to automate this at startup.
 
 ----
 
 ### 🐳 Docker Install
 
-1. Follow the **[Docker](https://docs.docker.com/engine/install/ubuntu/)** install guide.
+1. Follow the [official Docker Engine install guide for Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
-2. Follow the standard docker process for creating the container or follow the [Docker Deployment](docker.md) or [Portainer Deployment](portainer.md) guides
+2. Once Docker is installed, you can either:
+
+    - Use the standard Docker CLI to create the container
+    - Or follow the [Docker Deployment](docker.md) or [Portainer Deployment](portainer.md) guides for predefined setups
 
 ----
 
 ### 📂 Accessing the Mount on Windows
 
-1. From the Ubuntu terminal, paste the following, including the punctuation:
+1. From the Ubuntu terminal, open File Explorer in the current directory:
 
-    ```bash 
-    explorer.exe . 
+    ```bash
+    explorer.exe .
     ```
 
-2. A new file explorer window will appear; you’re now inside the Ubuntu directory structure
+2. A new File Explorer window will appear — you’re now inside the Ubuntu file system
 
-3. Navigate to the mount location and copy the full path from the explore window
+3. Navigate to the mount location and copy the full path from the Explorer address bar
 
-4. From another file explorer window, click "This PC," then right-click in the space below the listed drives and select add a network location
+4. In another File Explorer window:
+    - Click **This PC**
+    - Right-click in the blank space and select **Add a network location**
 
-5. In the pop-up, click next twice and past the mount location.
+5. In the popup:
+    - Click **Next** twice
+    - Paste the WSL path you copied
 
-6. Follow the remaining prompted steps
+6. Complete the remaining prompts to finalize the mount
+
+---
 
 
 ### 🌐 Mirrored Mode Networking
@@ -89,28 +100,28 @@ Starting with **Windows 11 22H2**, WSL2 supports a new networking mode called **
 
 1. Open (or create) the `.wslconfig` file in your Windows home directory:
 
-```powershell
-notepad $env:USERPROFILE\.wslconfig
-```
+    ```powershell
+    notepad $env:USERPROFILE\.wslconfig
+    ```
 
 2. Add the following section:
 
-```ini
-[wsl2]
-networkingMode=mirrored
-```
+    ```ini
+    [wsl2]
+    networkingMode=mirrored
+    ```
 
 3. Restart WSL for the changes to take effect:
 
-```bash
-wsl --shutdown
-```
+    ```bash
+    wsl --shutdown
+    ```
 
-Then restart your distro from the Windows menu or run:
+    Then restart your distro from the Windows menu or run:
 
-```bash
-wsl
-```
+    ```bash
+    wsl
+    ```
 
 ---
 
