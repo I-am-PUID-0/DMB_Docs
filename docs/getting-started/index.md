@@ -35,7 +35,7 @@ DMB is ideal if you:
 
 ## 🖼️ Architecture at a Glance
 
-![DMB Flow Diagram](../assets/images/flow-diagram.png)
+![DMB Flow Diagram](../assets/images/under_construction.png)
 
 !!! note  "For details on each service, visit the [Services Overview](../services/index.md)."
 

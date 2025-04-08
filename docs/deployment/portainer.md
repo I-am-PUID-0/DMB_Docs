@@ -22,7 +22,7 @@ Before you begin:
 
 ### 1. Log into Portainer
 
-Navigate to your Portainer instance (e.g., `http://localhost:9000`) and log in.
+Navigate to your Portainer instance (e.g., `http://localhost:9000`, or `https://localhost:9443`) and log in.
 
 ---
 

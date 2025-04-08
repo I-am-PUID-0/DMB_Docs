@@ -32,6 +32,7 @@ nav:
       - Portainer: deployment/portainer.md 
       - Unraid: deployment/unraid.md     
       - WSL: deployment/wsl.md
+      - Proxmox: deployment/proxmox.md
       - Synology: deployment/synology.md
       - QNAP: deployment/qnap.md
       - TrueNAS: deployment/truenas.md
@@ -91,7 +92,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js
   - assets/js/zoom.js
   - assets/js/github-meta.js
-    
+
 extra_css:
   - assets/css/main.css
 
