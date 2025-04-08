@@ -251,7 +251,7 @@ For more, see the [Portainer Deployment Guide](./portainer.md).
 
 ---
 
-### 🐳 Update Docker Bind Mount (Important)
+## 🐳 Update Docker Bind Mount (Important)
 
 When launching DMB or your media server, make sure the following mount is used:
 
