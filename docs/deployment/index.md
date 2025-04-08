@@ -4,7 +4,7 @@ title: Deployment
 
 # 🚀 Deployment Overview
 
-DMB can be deployed across a variety of platforms and environments. Whether you're using **Docker**, **Portainer**, **Unraid**, **WSL2**, or another method, this section will guide you through the available options to get DMB up and running.
+DMB can be deployed across a variety of platforms and environments. Whether you're using **Docker**, **Portainer**, **Unraid**, **WSL2**, or other systems like **TrueNAS**, **Synology**, or **QNAP**, this section will guide you through the available options to get DMB up and running.
 
 All deployment methods provide access to the same integrated services and configurations, with slight differences in how the container is started and managed.
 
@@ -16,6 +16,11 @@ All deployment methods provide access to the same integrated services and config
 Quickest way to get started using Docker CLI and `docker-compose.yml`.
 
 - [Deploy with Docker](docker.md)
+
+### 🧰 Dockge
+Deploy using the lightweight Dockge container manager.
+
+- [Deploy with Dockge](dockge.md)
 
 ### 📚 Portainer
 Deploy using the Portainer web interface.
@@ -32,7 +37,28 @@ Deploy DMB in a WSL2 environment on Windows 11.
 
 - [Deploy with WSL](wsl.md)
 
+### 📦 Proxmox
+Deploy inside a lightweight container or VM using Proxmox VE.
+
+- [Deploy with Proxmox](proxmox.md)
+
+### 🧠 QNAP
+Deploy using Container Station or Docker on supported QNAP NAS devices.
+
+- [Deploy with QNAP](qnap.md)
+
+### 🧊 Synology
+Deploy using Synology Docker and DSM's GUI or CLI.
+
+- [Deploy with Synology](synology.md)
+
+### 💾 TrueNAS
+Deploy on TrueNAS SCALE using Docker or native Apps.
+
+- [Deploy with TrueNAS](truenas.md)
+
 ---
+
 
 ## 🔐 Additional Notes
 
