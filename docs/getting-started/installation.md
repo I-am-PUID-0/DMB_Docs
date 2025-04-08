@@ -67,9 +67,14 @@ You’ll need to bind mount the following volumes when running the container:
 - Choose your deployment method:
 
     - [Docker](../deployment/docker.md)
+    - [Dockge](../deployment/dockge.md)
     - [Portainer](../deployment/portainer.md)
     - [Unraid](../deployment/unraid.md)
     - [WSL](../deployment/wsl.md)
+    - [Proxmox](../deployment/proxmox.md)
+    - [QNAP](../deployment/qnap.md)
+    - [Synology](../deployment/synology.md)
+    - [TrueNAS](../deployment/truenas.md)
 
 - Run the container and access the web UI at the configured port
 - View real-time or service logs to verify service health
