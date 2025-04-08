@@ -139,7 +139,7 @@ ubuntu@DMB:~/docker$ sudo docker compose up -d
 
 Once deployed, DMB will initialize and make its services available at their respective ports (e.g., DMB Frontend at `:3005`, API at `:8000`, etc.).
 
-You can now manage DMB entirely through the **DMB Frontend**, or explore the [Configuration](../features/configuration.md) docs to adjust settings as needed.
+You can now manage DMB entirely through the **[DMB Frontend](../services/dmb-frontend.md)**, or explore the [Configuration](../features/configuration.md) docs to adjust settings as needed.
 
 ---
 
@@ -152,14 +152,12 @@ You can now manage DMB entirely through the **DMB Frontend**, or explore the [Co
 sudo docker attach DMB
 ```
 
-
-
 ### 🔄 Detach Without Stopping the Container
 
 
-1. Press Ctrl + P followed by Ctrl + Q.
+Press Ctrl + P followed by Ctrl + Q.
 
-    This sequence sends a signal to Docker to detach from the container while leaving it running in the background.
+This sequence sends a signal to Docker to detach from the container while leaving it running in the background.
 
 !!! important 
     Use this sequence rather than simply closing the terminal window or using Ctrl + C, as those actions might stop the container.
@@ -175,18 +173,21 @@ sudo docker attach DMB
 
 ### 📜 View Docker Container Logs
 
-1. To view the container logs, enter the following:
+To view the container logs, enter the following:
+
 ```bash
 sudo docker container logs DMB
 ```
 
-2. Alternatively, use -f to follow the logs in real-time. 
-    You can exit with Ctrl + C (this does not stop the container).
+Alternatively, use -f to follow the logs in real-time. 
+!!! note "You can exit with Ctrl + C (this does not stop the container)."
+
 ```bash
 sudo docker logs -f DMB
 ```
 
 ### 🧯 Shutdown Docker Compose
+
 ```bash
 sudo docker compose down
 ```
@@ -195,6 +196,6 @@ Example output:
 ```bash
 ubuntu@DMB:~/docker$ sudo docker compose down
 [+] Running 2/2
- ✔ Container DMB       Removed                                                                                                                                                      10.4s 
- ✔ Network docker_default  Removed     
+✔ Container DMB       Removed                                                                                                                                                      10.4s 
+✔ Network docker_default  Removed     
 ```
