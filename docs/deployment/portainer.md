@@ -71,7 +71,7 @@ Click **Deploy the stack** to launch DMB.
 
 Once deployed, DMB will initialize and make its services available at their respective ports (e.g., DMB Frontend at `:3005`, API at `:8000`, etc.).
 
-You can now manage DMB entirely through the **DMB Frontend**, or explore the [Configuration](../features/configuration.md) docs to adjust settings as needed.
+You can now manage DMB entirely through the **[DMB Frontend](../services/dmb-frontend.md)**, or explore the [Configuration](../features/configuration.md) docs to adjust settings as needed.
 
 ---
 
