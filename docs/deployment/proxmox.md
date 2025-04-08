@@ -58,14 +58,8 @@ To ensure DMB works correctly inside your LXC container (especially with Docker,
     lxc.apparmor.profile: unconfined
     ```
 
-4. **Restart the container:**
-
-    ```bash
-    pct start <CTID>
-    ```
-
-    !!! note "`systemctl restart pve-container@<CTID>` may need to be used for changes to apply"
-
+!!! note
+    Don't restart the LXC until the below sections have been completed. 
 ---
 
 ### 📂 Configure Host Bind Mount
@@ -147,32 +141,41 @@ To persist the `rshared` behavior across boots:
 ## 👤 Add and Configure a User (Required)
 !!! warning "DMB must be ran as any user other than root"
 
-If not already created, add a user (`ubuntu`) and configure passwordless sudo:
+1. **Start/Restart the container:**
 
-```bash
-adduser ubuntu
-usermod -aG sudo ubuntu
+    ```bash
+    pct start <CTID>
+    ```
 
-# Enable passwordless sudo:
-echo "ubuntu ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ubuntu
-chmod 440 /etc/sudoers.d/ubuntu
-```
+    !!! note "`systemctl restart pve-container@<CTID>` may need to be used for changes to apply"
 
-To find the UID and GID (needed for `PUID` and `PGID` in your DMB config):
-```bash
-id ubuntu
-```
+2. If not already created, add a user (`ubuntu`) and configure passwordless sudo:
 
-Example output:
-```bash
-uid=1000(ubuntu) gid=1000(ubuntu)
-```
+    ```bash
+    adduser ubuntu
+    usermod -aG sudo ubuntu
 
-Use these values in your `dmb_config.json` or docker-compose:
-```json
-"puid": 1000,
-"pgid": 1000,
-```
+    # Enable passwordless sudo:
+    echo "ubuntu ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ubuntu
+    chmod 440 /etc/sudoers.d/ubuntu
+    ```
+
+    !!! tip
+        To find the UID and GID (needed for `PUID` and `PGID` in your DMB config):
+        ```bash
+        id ubuntu
+        ```
+
+        Example output:
+        ```bash
+        uid=1000(ubuntu) gid=1000(ubuntu)
+        ```
+
+        Use these values in your `dmb_config.json` or docker-compose:
+        ```json
+        "puid": 1000,
+        "pgid": 1000,
+        ```
 
 ---
 
