@@ -84,7 +84,7 @@ Once your stack is deployed, you can view logs for the DMB container:
 3. Go to the **Logs** tab.
 4. Logs will stream live by default. You can scroll or refresh for updates.
 
-> This is helpful for debugging service startup or checking configuration issues.
+!!! note "This is helpful for debugging service startup or checking configuration issues."
 
 ---
 
@@ -96,7 +96,7 @@ To view live output or run interactive commands:
 2. Click the **Attach Console** button (⚙️ icon or from the top bar).
 3. Choose a shell (e.g., `sh`, `bash`, or `/venv/bin/python`) and click **Connect**.
 
-> Use this for tasks like inspecting running processes, modifying configs, or testing tools inside the container.
+!!! note "Use this for tasks like inspecting running processes, modifying configs, or testing tools inside the container."
 
 ---
 
@@ -109,6 +109,6 @@ You can also use the **Console** option to access the container shell:
 3. Choose the shell you wish to run.
 4. Click **Connect**.
 
-> Great for quick inspection or administrative tasks inside the container.
+!!! note "Great for quick inspection or administrative tasks inside the container."
 
 ---
