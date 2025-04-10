@@ -67,7 +67,7 @@ Regularly backing these up allows you to quickly restore your environment.
 
 ### 📈 Can I monitor the system?
 
-Yes — the DMB Frontend shows real-time logs, service status, and allows interactive config management. You can also access logs from the filesystem or via the DMB API (see [API docs](../api/index.md)).
+Yes — the DMB Frontend shows real-time logs, service logs, service status, and allows interactive config management. You can also access logs from the filesystem or via the DMB API (see [API docs](../api/index.md)).
 
 ---
 
