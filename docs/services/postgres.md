@@ -100,7 +100,7 @@ psql -U DMB -d riven
 ```
 
 ### 🗑️ Drop the Riven Database
-> ⚠️ This will permanently delete the Riven database. Be sure you’ve backed up anything important.
+!!! warning "This will permanently delete the Riven database. Be sure you’ve backed up anything important."
 
 From the host (one-liner):
 ```bash
