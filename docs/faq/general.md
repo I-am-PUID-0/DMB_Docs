@@ -71,6 +71,52 @@ Yes — the DMB Frontend shows real-time logs, service status, and allows intera
 
 ---
 
+### 🔗 What’s the difference between using rclone/Zurg mounts vs. symlinks (Riven, etc.) in my media server?
+
+DMB supports **two methods of exposing content to your media server**, each with its own use case:
+
+#### 1. **Direct Mount (Zurg/rclone)**
+
+Mounting the WebDAV or remote storage directly using `rclone` (which often connects to a Zurg instance) gives you full access to all files in your debrid account.
+
+**✅ Pros:**
+
+- Access to **all debrid content**, including content not added by Riven
+- Instant visibility of new files from your debrid service
+- Useful for manual browsing or catching content missed by automation
+- Allows content orchestration with [Debrid Media Manager](https://github.com/debridmediamanager/debrid-media-manager) (DMM)
+- Less complexity when sharing mounts across the host or network
+
+**⚠️ Cons:**
+
+- File/folder naming is often **inconsistent or messy**
+- Can lead to **Plex/Emby/Jellyfin misidentification**
+- Media scanners may perform poorly due to large, unorganized libraries
+
+#### 2. **Symlinked Mount (via Riven)**
+
+Riven creates cleanly named **symlinks** pointing to content in the underlying Zurg/rclone mount (usually in a shared directory like `/data`). 
+
+These symlinks are stored in a separate directory (like `/mnt`) and represent only **curated content** Riven has identified and processed.
+
+**✅ Pros:**
+
+- Only includes content that’s been properly scraped and sorted
+- Directory structure and filenames are optimized for media servers
+- More accurate **library scans** and faster detection
+- Ideal for fully automated Plex/Emby/Jellyfin setups
+
+**⚠️ Cons:**
+
+- Only includes what Riven has processed — not your full debrid library
+- Requires Riven to stay running and correctly configured
+- If Riven settings are misconfigured, some content may not appear
+- If Riven's database is lost or reset, all content must be scraped and added again
+- Symlinks add complexity by requiring your media server to share the same exact container paths as defined in DMB's `dmb_config.json` — e.g., `/mnt` & `/data` must exist **exactly** the same inside your media server container or on the host when the media server is not containerized  
+
+---
+
+
 ## 📎 Related Pages
 
 - [Configuration Guide](../features/configuration.md)
