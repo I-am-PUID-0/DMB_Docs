@@ -63,6 +63,12 @@ Absolutely. The most important files to back up are:
 
 Regularly backing these up allows you to quickly restore your environment.
 
+!!! warning "Exclude mounted paths from your backup" 
+    Be sure to exclude any mounted paths (e.g., /data/rclone_RD) when backing up. 
+    Otherwise, you’ll unintentionally download and archive the entire contents of your debrid services, which can be massive and unnecessary.
+
+    Don’t believe me? Just ask Mr. Krabs.
+
 ---
 
 ### 📈 Can I monitor the system?
