@@ -106,7 +106,7 @@ To create a GitHub token:
 1. Go to [GitHub Developer Settings → Tokens (Classic)](https://github.com/settings/tokens)
 2. Click **Generate new token (classic)**
 3. Set an expiration and enable the following scopes:
-
+    - `repo:all`
     - `write:packages` 
     - `read:packages`
 
