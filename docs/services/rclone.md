@@ -238,7 +238,6 @@ You can apply these flags in three ways:
 | `--vfs-read-chunk-size`           | `1M`           | Minimizes initial bandwidth usage per file during scans.                   |
 | `--vfs-read-chunk-size-limit`     | `32M`          | Allows efficient chunking during actual playback.                          |
 | `--buffer-size`                   | `64M`          | Buffers streaming into RAM per open file (adjust to your available RAM).   |
-| `--dir-cache-time`                | `10s`          | Caches directory structure, reducing API calls.                            |
 | `--vfs-cache-max-age`             | `6h`           | Removes old cache files to preserve space.                                 |
 | `--vfs-cache-max-size`            | `100G`         | Limits total disk cache size.                                              |
 | `--attr-timeout`                  | `1s`           | Prevents stale attribute caching.                                          |
