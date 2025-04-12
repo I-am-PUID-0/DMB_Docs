@@ -151,7 +151,7 @@ You can apply these flags in three ways:
         If you prefer to apply settings per-instance, then see option 2 or 3.
 
     ```env
-    RCLONE_VFS_CACHE_MODE=writes
+    RCLONE_VFS_CACHE_MODE=full
     RCLONE_VFS_READ_CHUNK_SIZE=1M
     RCLONE_VFS_READ_CHUNK_SIZE_LIMIT=32M
     RCLONE_BUFFER_SIZE=64M
@@ -205,7 +205,7 @@ You can apply these flags in three ways:
         "--poll-interval=0",
         "--dir-cache-time=72h",
         "--allow-non-empty",
-        "--vfs-cache-mode=writes",
+        "--vfs-cache-mode=full",
         "--vfs-read-chunk-size=1M",
         "--vfs-read-chunk-size-limit=32M",
         "--buffer-size=64M",
@@ -234,7 +234,7 @@ You can apply these flags in three ways:
 | `--poll-interval`                 | `0`                       | Disables polling for changes (not supported by debrid remotes). |
 | `--dir-cache-time`                | `10m`                     | Cache directory structure for 10 minutes.                       |
 | `--allow-non-empty`               | *(enabled)*               | Allows mounting to non-empty directories.                       |
-| `--vfs-cache-mode`                | `writes`       | Allows writing & deletion, necessary for media server interaction.         |
+| `--vfs-cache-mode`                | `full`       | Allows writing & deletion, necessary for media server interaction.         |
 | `--vfs-read-chunk-size`           | `1M`           | Minimizes initial bandwidth usage per file during scans.                   |
 | `--vfs-read-chunk-size-limit`     | `32M`          | Allows efficient chunking during actual playback.                          |
 | `--buffer-size`                   | `64M`          | Buffers streaming into RAM per open file (adjust to your available RAM).   |
