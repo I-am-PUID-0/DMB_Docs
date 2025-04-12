@@ -155,7 +155,7 @@ You can apply these flags in three ways:
     RCLONE_VFS_READ_CHUNK_SIZE=1M
     RCLONE_VFS_READ_CHUNK_SIZE_LIMIT=32M
     RCLONE_BUFFER_SIZE=64M
-    RCLONE_DIR_CACHE_TIME=72h
+    RCLONE_DIR_CACHE_TIME=10s
     RCLONE_VFS_CACHE_MAX_AGE=6h
     RCLONE_VFS_CACHE_MAX_SIZE=100G
     RCLONE_ATTR_TIMEOUT=1s
@@ -186,7 +186,7 @@ You can apply these flags in three ways:
         "--gid=1000",
         "--allow-other",
         "--poll-interval=0",
-        "--dir-cache-time=10m",
+        "--dir-cache-time=10s",
         "--allow-non-empty"
       ]
       ```
@@ -203,7 +203,7 @@ You can apply these flags in three ways:
         "--gid=1000",
         "--allow-other",
         "--poll-interval=0",
-        "--dir-cache-time=72h",
+        "--dir-cache-time=10s",
         "--allow-non-empty",
         "--vfs-cache-mode=full",
         "--vfs-read-chunk-size=1M",
@@ -238,7 +238,7 @@ You can apply these flags in three ways:
 | `--vfs-read-chunk-size`           | `1M`           | Minimizes initial bandwidth usage per file during scans.                   |
 | `--vfs-read-chunk-size-limit`     | `32M`          | Allows efficient chunking during actual playback.                          |
 | `--buffer-size`                   | `64M`          | Buffers streaming into RAM per open file (adjust to your available RAM).   |
-| `--dir-cache-time`                | `72h`          | Caches directory structure, reducing API calls.                            |
+| `--dir-cache-time`                | `10s`          | Caches directory structure, reducing API calls.                            |
 | `--vfs-cache-max-age`             | `6h`           | Removes old cache files to preserve space.                                 |
 | `--vfs-cache-max-size`            | `100G`         | Limits total disk cache size.                                              |
 | `--attr-timeout`                  | `1s`           | Prevents stale attribute caching.                                          |
