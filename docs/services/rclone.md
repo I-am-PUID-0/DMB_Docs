@@ -232,7 +232,7 @@ You can apply these flags in three ways:
 | `--gid`                           | `1000`                    | GID to mount as (Linked to `PGID`).                             |
 | `--allow-other`                   | *(enabled)*               | Allows other processes (like Plex) to access the mount.         |
 | `--poll-interval`                 | `0`                       | Disables polling for changes (not supported by debrid remotes). |
-| `--dir-cache-time`                | `10m`                     | Cache directory structure for 10 minutes.                       |
+| `--dir-cache-time`                | `10s`                     | Cache directory structure for 10 seconds.                       |
 | `--allow-non-empty`               | *(enabled)*               | Allows mounting to non-empty directories.                       |
 | `--vfs-cache-mode`                | `full`       | Allows writing & deletion, necessary for media server interaction.         |
 | `--vfs-read-chunk-size`           | `1M`           | Minimizes initial bandwidth usage per file during scans.                   |
