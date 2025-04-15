@@ -154,8 +154,10 @@ To persist the `rshared` behavior across boots:
     ```bash
     adduser ubuntu
     usermod -aG sudo ubuntu
+    ```
 
-    # Enable passwordless sudo:
+3. Enable passwordless sudo (Optional):
+    ```
     echo "ubuntu ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ubuntu
     chmod 440 /etc/sudoers.d/ubuntu
     ```
@@ -197,7 +199,7 @@ To persist the `rshared` behavior across boots:
 
 3. Create the DMB directories.
     ```bash
-    mkdir -p DMB/config DMB/log DMB/Zurg/RD DMB/Riven/data DMB/Riven/mnt DMB/PostgreSQL/data DMB/pgAdmin4/data /DMB/Zilean/data
+    mkdir -p DMB/config DMB/log DMB/Zurg/RD DMB/Riven/data DMB/Riven/mnt DMB/PostgreSQL/data DMB/pgAdmin4/data DMB/Zilean/data
     ```
 
 
