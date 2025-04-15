@@ -138,7 +138,7 @@ To persist the `rshared` behavior across boots:
 
 ---
 
-## 👤 Add and Configure a User (Required)
+## 👤 Add and Configure a User inside the LXC (Required) 
 !!! warning "DMB must be ran as any user other than root"
 
 1. **Start/Restart the container:**
@@ -149,7 +149,7 @@ To persist the `rshared` behavior across boots:
 
     !!! note "`systemctl restart pve-container@<CTID>` may need to be used for changes to apply"
 
-2. If not already created, add a user (`ubuntu`) and configure passwordless sudo:
+2. If not already created in the LXC, add a user (`ubuntu`) and configure passwordless sudo:
 
     ```bash
     adduser ubuntu
@@ -181,7 +181,7 @@ To persist the `rshared` behavior across boots:
 
 ---
 
-## 📁 Define the Directory Structure
+## 📁 Define the Directory Structure inside the LXC
 
 !!! note
     If you already have a directory structure you'd like to use, then you can skip this step.
@@ -205,7 +205,7 @@ To persist the `rshared` behavior across boots:
 
 --- 
 
-## 🐳 Install Docker
+## 🐳 Install Docker inside the LXC
 
 1. Run the official Docker install script:
 
@@ -220,9 +220,16 @@ To persist the `rshared` behavior across boots:
     docker compose version
     ```
 
+3. Add your user to the docker group:
+    ```bash
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+    ```
+
+
 ---
 
-## 🚢 Install Portainer (Optional)
+## 🚢 Install Portainer inside the LXC (Optional) 
 If you want to manage Docker visually via Portainer:
 
 1. Create the Portainer data volume:
