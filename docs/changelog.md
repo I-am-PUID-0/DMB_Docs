@@ -5,6 +5,24 @@ hide:
 
 # Changelog
 
+## [6.8.2](https://github.com/I-am-PUID-0/DMB/compare/6.8.1...6.8.2) (2025-04-16)
+
+
+### 🐛 Bug Fixes
+
+* **config_loader:** remove unused regex import ([34fe0b2](https://github.com/I-am-PUID-0/DMB/commit/34fe0b2bc56ec13e0a0ccae95d0f460912941d19))
+* **config:** implement update_config_with_top_level_defaults to merge default config ([bb7aa31](https://github.com/I-am-PUID-0/DMB/commit/bb7aa3112523c8b7af2c99d420bfc4de77709dce))
+
+## [6.8.1](https://github.com/I-am-PUID-0/DMB/compare/6.8.0...6.8.1) (2025-04-16)
+
+
+### 🐛 Bug Fixes
+
+* **devcontainer:** add plex_debrid config mount to devcontainer configuration ([50a7872](https://github.com/I-am-PUID-0/DMB/commit/50a787268653aa2526a3b3559200b2a52844d34e))
+* **main:** handle missing plex_debrid config by providing default empty dict ([4d8959b](https://github.com/I-am-PUID-0/DMB/commit/4d8959b12e4fc6cd5226aadf356a4134e18473df))
+* **plex-debrid:** update settings file path in Dockerfile and add config copying in setup.py ([f69545d](https://github.com/I-am-PUID-0/DMB/commit/f69545d19bac40cd2be186b523feff69f69c0765))
+* **setup:** refactor plex_debrid setup and update config file path ([fbd96ab](https://github.com/I-am-PUID-0/DMB/commit/fbd96aba1a8d283e91336f2427f18bf87ddefae6))
+
 ## [6.8.0](https://github.com/I-am-PUID-0/DMB/compare/6.7.3...6.8.0) (2025-04-15)
 
 
