@@ -3,9 +3,9 @@ name: Sync Changelog
 on:
   schedule:
     - cron: '0 0 * * *'
-  push:
-    branches:
-      - master
+  pull_request:
+    types:
+      - closed
 
 jobs:
   update-changelog:
