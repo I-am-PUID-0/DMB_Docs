@@ -33,7 +33,7 @@ hide:
       src="https://img.shields.io/github/issues/I-am-PUID-0/DMB?style=for-the-badge"
     />
   </a>
-  <a href="https://github.com/I-am-PUID-0/DMB/blob/master/COPYING">
+  <a href="https://github.com/I-am-PUID-0/DMB/blob/master/LICENSE">
     <img
       alt="License"
       src="https://img.shields.io/github/license/I-am-PUID-0/DMB?style=for-the-badge"
