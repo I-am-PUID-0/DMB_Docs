@@ -162,7 +162,7 @@ Since Plex (or another media server) and the DMB container need to both access t
 Then, inside the `dmb_config.json`, make sure you define:
 
 ```json
-"riven": {
+"riven_backend": {
   "symlink_library_path": "/docker/DMB/Riven/mnt",
 }
 ```
@@ -206,7 +206,7 @@ Docker Compose example:
 And then update the configuration:
 
 ```json
-"riven": {
+"riven_backend": {
   "symlink_library_path": "/mnt",
 },
 "rclone": {
