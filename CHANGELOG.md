@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.1.0...1.1.1) (2025-04-18)
+
+
+### 🤡 Other Changes
+
+* **workflows:** update permissions to include pull-requests write access ([86ddd86](https://github.com/I-am-PUID-0/DMB_Docs/commit/86ddd866967a9573dc426b6648895a08f013e668))
+
 ## [1.1.0](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.0.0...1.1.0) (2025-04-18)
 
 
