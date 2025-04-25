@@ -62,7 +62,7 @@ cd ~ && mkdir docker && cd docker
 
 2. Create the DMB directories.
 ```bash
-mkdir -p DMB/config DMB/log DMB/Zurg/RD /DMB/Zurg/mnt DMB/Riven/data DMB/Riven/mnt DMB/PostgreSQL/data DMB/pgAdmin4/data /DMB/Zilean/data
+mkdir -p DMB/config DMB/log DMB/Zurg/RD DMB/Zurg/mnt DMB/Riven/data DMB/Riven/mnt DMB/PostgreSQL/data DMB/pgAdmin4/data DMB/Zilean/data
 ```
 
 
