@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.1.1...1.1.2) (2025-04-25)
+
+
+### 🐛 Bug Fixes
+
+* **docs:** correct directory creation command in Docker deployment guide ([ba7244c](https://github.com/I-am-PUID-0/DMB_Docs/commit/ba7244cbb5da8ddebf33c9e8557184149f4e7d4c))
+* **docs:** update license link in index.md to point to LICENSE file ([66f9a8a](https://github.com/I-am-PUID-0/DMB_Docs/commit/66f9a8a5cf4c3d2c5472977c7e302efff180532b))
+
 ## [1.1.1](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.1.0...1.1.1) (2025-04-18)
 
 
