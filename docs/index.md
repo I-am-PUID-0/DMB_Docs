@@ -66,7 +66,7 @@ hide:
             <strong>DMB - A Unified Media Solution</strong><br>
             <p>
                 <strong>DMB</strong> is an all-in-one media management and streaming solution that integrates 
-                <strong>Riven, Zurg, Zilean, rclone, PostgreSQL, pgAdmin 4, and others</strong> into a single Docker image 
+                <strong>Riven, Plex Debrid, CLI Debrid, Zurg, Zilean, rclone, PostgreSQL, pgAdmin 4, and others</strong> into a single Docker image 
                 for streamlined deployment. It automates the process of 
                 <strong>finding, downloading, and organizing media content</strong> using 
                 <strong>Debrid Services, Plex Discover Watchlists, Trakt lists, Overseerr, and more</strong>, 
@@ -81,6 +81,8 @@ hide:
             <p>The <strong>DMB ecosystem</strong> is built on multiple underlying projects that work together to enable <strong>Plex streaming</strong> using Debrid Services. These include:</p>
             <ul class="project-list">
                 <li>🔹 <a href="https://github.com/rivenmedia/riven">Riven</a></li>
+                <li>🔹 <a href="https://github.com/I-am-PUID-0/plex_debrid">Plex Debrid</a></li>
+                <li>🔹 <a href="https://github.com/godver3/cli_debrid">CLI Debrid</a></li>
                 <li>🔹 <a href="https://github.com/debridmediamanager/zurg-testing">Zurg</a></li>
                 <li>🔹 <a href="https://github.com/iPromKnight/zilean">Zilean</a></li>
                 <li>🔹 <a href="https://github.com/rclone/rclone">rclone</a></li>
@@ -93,7 +95,7 @@ hide:
         <div class="column">
             <h2>🛠️ So, what does DMB do?</h2>
             <ul class="features">
-                <li> <strong>Unified Deployment</strong> – DMB integrates Riven, Zurg, Zilean, rclone, PostgreSQL, and pgAdmin 4 into a <strong>single Docker image</strong> for <strong>faster and simplified deployment</strong>.</li>
+                <li> <strong>Unified Deployment</strong> – DMB integrates Riven, Plex Debrid, Zurg, Zilean, rclone, PostgreSQL, and pgAdmin 4 into a <strong>single Docker image</strong> for <strong>faster and simplified deployment</strong>.</li>
                 <li> <strong>Automated Configuration</strong> – DMB eliminates the need for <strong>manual setup</strong>, ensuring a smooth and efficient media management experience.</li>
                 <li> <strong>Web-Based UI</strong> – Take full control with an intuitive <strong>web interface</strong>, making it easy to <strong>manage downloads, track content, and interact with the various services</strong>.</li>
             </ul>

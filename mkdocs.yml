@@ -19,6 +19,10 @@ nav:
       - Overview: services/index.md
       - DMB API: services/api.md
       - DMB Frontend: services/dmb-frontend.md
+      - CLI Debrid: services/cli-debrid.md
+      - CLI Battery: services/cli-battery.md
+      - Phalanx DB: services/phalanx-db.md
+      - Plex Debrid: services/plex-debrid.md
       - pgAdmin: services/pgadmin.md
       - PostgreSQL: services/postgres.md
       - rclone: services/rclone.md
@@ -47,8 +51,10 @@ nav:
   - FAQ: 
       - General: faq/general.md
       - DMB: faq/dmb.md
-      - pgAdmin: faq/pgadmin.md
+      - CLI Debrid: faq/cli-debrid.md
       - Plex: faq/plex.md
+      - Plex Debrid: faq/plex-debrid.md
+      - pgAdmin: faq/pgadmin.md
       - PostgreSQL: faq/postgres.md
       - rclone: faq/rclone.md
       - Riven: faq/riven.md
