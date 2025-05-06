@@ -16,42 +16,40 @@ DMB is built as a collection of microservices, each fulfilling a specific role i
 
 1. **User Interaction**
 
-   ```
-   - 🖥️ **DMB Frontend** provides a graphical interface for managing all services.
-   ```
+    - 🖥️ **DMB Frontend** provides a graphical interface for managing all services.
 
 2. **API & Coordination**
 
-   * 🔌 **DMB API** acts as a centralized endpoint for frontend communication and coordinating actions between services.
+    * 🔌 **DMB API** acts as a centralized endpoint for frontend communication and coordinating actions between services.
 
 3. **Metadata Management & Discovery**
 
-   * 🧠 **Riven Backend** searches and indexes content, initiates downloads, and maintains integration with media platforms (Trakt, Overseerr, Plex).
-   * 🧲 **CLI Debrid** automates discovery, upgrading, content management, and maintains integration with media platforms (Trakt, Overseerr, Plex).
-   * 🎨 **Riven Frontend** interfaces directly with the backend to manage searches, downloads, and settings.
+    * 🧠 **Riven Backend** searches and indexes content, initiates downloads, and maintains integration with media platforms (Trakt, Overseerr, Plex).
+    * 🧲 **CLI Debrid** automates discovery, upgrading, content management, and maintains integration with media platforms (Trakt, Overseerr, Plex).
+    * 🎨 **Riven Frontend** interfaces directly with the backend to manage searches, downloads, and settings.
 
-   !!! note "See the [Riven Wiki](https://rivenmedia.github.io/wiki/) and [CLI Debrid GitHub](https://github.com/godver3/cli_debrid) for more details"
+    !!! note "See the [Riven Wiki](https://rivenmedia.github.io/wiki/) and [CLI Debrid GitHub](https://github.com/godver3/cli_debrid) for more details"
 
 4. **Metadata Caching**
 
-   * 🔋 **CLI Battery** provides local metadata storage and Trakt integration, caching frequently accessed metadata.
-   * 🌐 **Phalanx DB** offers an optional decentralized metadata store powered by Hyperswarm.
-   * 🧠 **Zilean** caches metadata (e.g., hashes, content names) and serves repeated requests to reduce lookup time for indexed content.
+    * 🔋 **CLI Battery** provides local metadata storage and Trakt integration, caching frequently accessed metadata.
+    * 🌐 **Phalanx DB** offers an optional decentralized metadata store powered by Hyperswarm.
+    * 🧠 **Zilean** caches metadata (e.g., hashes, content names) and serves repeated requests to reduce lookup time for indexed content.
 
-   !!! note "See the [Zilean Wiki](https://ipromknight.github.io/zilean/getting-started.html) and [CLI Debrid GitHub](https://github.com/godver3/cli_debrid) for more details "
+    !!! note "See the [Zilean Wiki](https://ipromknight.github.io/zilean/getting-started.html) and [CLI Debrid GitHub](https://github.com/godver3/cli_debrid) for more details "
 
 5. **Content Acquisition**
 
-   * ⚡ **Zurg** interfaces with Real-Debrid to manage content on the debrid service.
+    * ⚡ **Zurg** interfaces with Real-Debrid to manage content on the debrid service.
 
 6. **Cloud Storage Mounting**
 
-   * ☁️ **rclone** mounts debrid storage (via WebDAV or similar) inside the container, making downloaded content available to other services.
+    * ☁️ **rclone** mounts debrid storage (via WebDAV or similar) inside the container, making downloaded content available to other services.
 
 7. **Persistent Storage and Management**
 
-   * 🗃️ **PostgreSQL** provides the primary database layer for Zilean, Riven, and pgAdmin.
-   * 📊 **pgAdmin 4** gives users a web-based interface for inspecting and managing PostgreSQL.
+    * 🗃️ **PostgreSQL** provides the primary database layer for Zilean, Riven, and pgAdmin.
+    * 📊 **pgAdmin 4** gives users a web-based interface for inspecting and managing PostgreSQL.
 
 ## 🧱 Core Service Summaries
 
@@ -59,8 +57,8 @@ DMB is built as a collection of microservices, each fulfilling a specific role i
 
 Coordinates service startup and exposes FastAPI endpoints.
 
-* Default Port: `8000`
-* Logs: `/log`
+- Default Port: `8000`
+- Logs: `/log`
 
 ---
 
@@ -68,7 +66,7 @@ Coordinates service startup and exposes FastAPI endpoints.
 
 User interface for managing service state, logs, and updates.
 
-* Default Port: `3005`
+- Default Port: `3005`
 
 ---
 
@@ -76,8 +74,8 @@ User interface for managing service state, logs, and updates.
 
 Database admin UI connected to DMB's PostgreSQL backend.
 
-* Port: `5050`
-* Data Dir: `/pgadmin/data`
+- Port: `5050`
+- Data Dir: `/pgadmin/data`
 
 ---
 
