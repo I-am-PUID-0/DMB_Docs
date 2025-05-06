@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.1.2...1.2.0) (2025-05-06)
+
+
+### ✨ Features
+
+* **cli_debrid:** add documentation for CLI Battery, CLI Debrid, Phalanx DB, and related services ([2dbc23b](https://github.com/I-am-PUID-0/DMB_Docs/commit/2dbc23b63d58ee8b6689f4613ba659a28928c343))
+
 ## [1.1.2](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.1.1...1.1.2) (2025-04-25)
 
 
