@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.2.0...1.2.1) (2025-05-06)
+
+
+### 🐛 Bug Fixes
+
+* **docs:** update service descriptions to include CLI Debrid and CLI Battery ([4729a8d](https://github.com/I-am-PUID-0/DMB_Docs/commit/4729a8d3ea8d1bf996dba16365312e4023f5011c))
+
 ## [1.2.0](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.1.2...1.2.0) (2025-05-06)
 
 
