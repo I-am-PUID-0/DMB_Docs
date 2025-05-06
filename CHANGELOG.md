@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.2.1...1.2.2) (2025-05-06)
+
+
+### 🐛 Bug Fixes
+
+* **docs:** fix formatting in services overview documentation ([27961a5](https://github.com/I-am-PUID-0/DMB_Docs/commit/27961a54b8ae9ba6e1bef285c2acaba50d6a5ee3))
+
 ## [1.2.1](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.2.0...1.2.1) (2025-05-06)
 
 
