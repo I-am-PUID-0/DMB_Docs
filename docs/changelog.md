@@ -5,6 +5,30 @@ hide:
 
 # Changelog
 
+## [6.12.1](https://github.com/I-am-PUID-0/DMB/compare/6.12.0...6.12.1) (2025-05-09)
+
+
+### 🐛 Bug Fixes
+
+* **auto_update:** release version handling for nightly and prerelease updates ([c9e205f](https://github.com/I-am-PUID-0/DMB/commit/c9e205fd0eec9c783db7fad5754ded34f6911eb8))
+
+## [6.12.0](https://github.com/I-am-PUID-0/DMB/compare/6.11.0...6.12.0) (2025-05-09)
+
+
+### ✨ Features
+
+* **rclone:** adds multiple debrid service support for direct connections using webdav or ftp ([e5b5390](https://github.com/I-am-PUID-0/DMB/commit/e5b539098bcfe879a46b7c1626b297f8b64084e7))
+
+
+### 🐛 Bug Fixes
+
+* **funding:** correct syntax for GitHub funding configuration ([590c109](https://github.com/I-am-PUID-0/DMB/commit/590c1092c5fdb1979835ff807088a9c6108d2fa0))
+
+
+### 🤡 Other Changes
+
+* **funding:** add initial funding configuration for GitHub sponsors ([88bc9b9](https://github.com/I-am-PUID-0/DMB/commit/88bc9b9b13a75cb22b2542bd9ca9c0c7054de8d1))
+
 ## [6.11.0](https://github.com/I-am-PUID-0/DMB/compare/6.10.0...6.11.0) (2025-05-08)
 
 
