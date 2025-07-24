@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.2.3...1.2.4) (2025-07-24)
+
+
+### 🐛 Bug Fixes
+
+* correct YAML front matter formatting in services overview ([5e27418](https://github.com/I-am-PUID-0/DMB_Docs/commit/5e2741844fe440385322eda28db7a0d02ccb7e66))
+
 ## [1.2.3](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.2.2...1.2.3) (2025-07-24)
 
 
