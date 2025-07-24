@@ -1,7 +1,6 @@
 ---
-
-## title: Services Overview
-
+title: Services Overview
+---
 # Services Overview
 
 DMB is composed of multiple services that work together to provide a complete automated media management system. Each service can be configured, updated, and monitored independently, and serves a specific function within the DMB ecosystem.
