@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.2.2...1.2.3) (2025-07-24)
+
+
+### 📖 Documentation
+
+* Update documentation for new features ([579fe59](https://github.com/I-am-PUID-0/DMB_Docs/commit/579fe592b92ad0e0787461ace35e43fd7ecd8962))
+
 ## [1.2.2](https://github.com/I-am-PUID-0/DMB_Docs/compare/1.2.1...1.2.2) (2025-05-06)
 
 
