@@ -19,7 +19,13 @@ DMB (Debrid Media Bridge) is an all-in-one media management solution designed to
 DMB integrates the following projects to create a seamless media experience:
 
 ### 🎞️ **Riven**  
-[Riven](https://github.com/rivenmedia/riven) is responsible for content management, handling **search queries, downloading, and organizing media** for streaming.
+[Riven](https://github.com/rivenmedia/riven) is one of multiple options responsible for content management, handling **search queries, downloading, and organizing media** for streaming.
+
+### 🎞️ **CLI Debrid**  
+[CLI Debrid](https://github.com/godver3/cli_debrid) is one of multiple options responsible for content management, handling **search queries, downloading, and organizing media** for streaming.
+
+### 🎞️ **Decypharr**  
+[Decypharr](https://github.com/sirrobot01/decypharr) is one of multiple options responsible for content management, handling **search queries, downloading, and organizing media** for streaming.
 
 ### 🤖 **Zurg**  
 [Zurg](https://github.com/debridmediamanager/zurg-testing) acts as the automation engine that interacts with **Real-Debrid** to fetch media files.

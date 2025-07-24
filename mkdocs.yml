@@ -19,6 +19,7 @@ nav:
       - Overview: services/index.md
       - DMB API: services/api.md
       - DMB Frontend: services/dmb-frontend.md
+      - Decypharr: services/decypharr.md      
       - CLI Debrid: services/cli-debrid.md
       - CLI Battery: services/cli-battery.md
       - Phalanx DB: services/phalanx-db.md
@@ -51,6 +52,7 @@ nav:
   - FAQ: 
       - General: faq/general.md
       - DMB: faq/dmb.md
+      - Decypharr: faq/decypharr.md
       - CLI Debrid: faq/cli-debrid.md
       - Plex: faq/plex.md
       - Plex Debrid: faq/plex-debrid.md

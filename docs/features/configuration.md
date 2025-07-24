@@ -125,6 +125,8 @@ See the individual service pages for in-depth configuration details:
 
 - [DMB API](../services/api.md)
 - [DMB Frontend](../services/dmb-frontend.md)
+- [Decypharr](../services/decypharr.md)
+- [CLI Debrid](../services/cli-debrid.md)
 - [pgAdmin 4](../services/pgadmin.md)
 - [PostgreSQL](../services/postgres.md)
 - [rclone](../services/rclone.md)

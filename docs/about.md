@@ -41,7 +41,9 @@ DMB is built using a **modular, microservices** architecture, with the following
 |------------------|-------------|
 | **DMB API**       | Core controller and coordination hub |
 | **DMB Frontend**  | Graphical interface for managing services, configs, and logs |
-| **Riven**         | Content search, acquisition, and integration with platforms like Plex, Trakt, and Overseerr |
+| **Riven**         | Content search, acquisition, and integration with platforms like Plex, Trakt, Overseerr, etc |
+| **CLI Debrid**    | Content search, acquisition, and integration with platforms like Plex, Trakt, Overseerr, etc |
+| **Decypharr**     | Content search, acquisition, and integration with platforms like Plex, Trakt, Overseerr, etc |
 | **Zurg**          | Handles Real-Debrid content interaction, file repair, and directory structuring |
 | **rclone**        | Mounts cloud storage into the local container for access by your media server |
 | **Zilean**        | Caches metadata and file hash lookups for performance |
@@ -61,8 +63,9 @@ You can help by:
 - 💬 Boosting or participating in the [Discord community](https://discord.gg/8dqKUBtbp5)
 - 🛠️ Submitting feedback, bug reports, or pull requests
 - 🧠 Helping others with questions or documentation improvements
+- 💵 Sponsoring the Dev through [GitHub Sponsors](https://github.com/sponsors/I-am-PUID-0)
 
-!!! note "DMB does **not** accept donations — but your support and involvement are deeply appreciated!"
+
 
 See the [Contributing Guide](contributing.md) for more details.
 

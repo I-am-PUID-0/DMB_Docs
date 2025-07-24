@@ -76,7 +76,7 @@ docker-compose:
 ---
 
 ## 📌 Tips
-- Always monitor `/log/*.log` files for troubleshooting.
+- Always monitor `/log/*.log` files for troubleshooting or monitor the logs from the **DMB Frontend**.
 - Ensure PostgreSQL is running before launching services that depend on it.
 - If using Real-Debrid, ensure `api_key` is provided in rclone or Zurg instances.
 - Logs can be colored if `color_log` is enabled in the config.

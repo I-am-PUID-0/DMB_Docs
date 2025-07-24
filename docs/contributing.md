@@ -14,6 +14,8 @@ DMB is an open-source, community-driven project.
 
 Whether you're a developer, power user, or just someone passionate about improving media automation, your help is always appreciated!
 
+Thank you for helping make DMB better for everyone!
+
 ---
 
 ## 👨‍💻 Development Contributions
@@ -46,8 +48,7 @@ You can find the [devcontainer setup file](https://github.com/I-am-PUID-0/DMB/tr
 Even if you don't write code, there are **plenty of ways** to help!
 
 ### ⭐ Star the Repo
-A quick way to show support is by starring the project on GitHub:  
-[github.com/I-am-PUID-0/DMB](https://github.com/I-am-PUID-0/DMB)
+- A quick way to show support is by starring the project on GitHub:  [github.com/I-am-PUID-0/DMB](https://github.com/I-am-PUID-0/DMB)
 
 ### 🗣️ Join the Community
 - Ask questions or help others in the **[DMB Discord server](https://discord.gg/8dqKUBtbp5)**
@@ -62,8 +63,7 @@ A quick way to show support is by starring the project on GitHub:
 
 ## 🧾 Monetary Contributions?
 
-DMB does **not accept or request monetary donations**.  
-While the gesture is genuinely appreciated, **your involvement is far more valuable**.
+- Sponsor the Dev through [GitHub Sponsors](https://github.com/sponsors/I-am-PUID-0)
 
 ---
 
@@ -77,4 +77,3 @@ If you have ideas, feature requests, or feedback:
 
 ---
 
-Thank you for helping make DMB better for everyone!

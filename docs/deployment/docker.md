@@ -62,7 +62,7 @@ cd ~ && mkdir docker && cd docker
 
 2. Create the DMB directories.
 ```bash
-mkdir -p DMB/config DMB/log DMB/Zurg/RD DMB/Zurg/mnt DMB/Riven/data DMB/Riven/mnt DMB/PostgreSQL/data DMB/pgAdmin4/data DMB/Zilean/data
+mkdir -p DMB/config DMB/log DMB/Zurg/RD DMB/Riven/data DMB/PostgreSQL/data DMB/pgAdmin4/data DMB/Zilean/data DMB/plex_debrid DMB/decypharr DMB/cli_debrid DMB/phalanx_db DMB/mnt/debrid
 ```
 
 
@@ -91,14 +91,10 @@ sed -i "s|/home/username/docker/DMB|$HOME/docker/DMB|g" docker-compose.yml
 
 ```bash
 read -p "Enter your timezone [UTC]: " TZ && TZ=${TZ:-UTC} && \
-read -p "Enter your RealDebrid API key: " RD_KEY && \
-read -p "Enter your Riven Frontend Origin (e.g., http://0.0.0.0:3000): " RIVEN_ORIGIN && \
 sed -i \
   -e "s|TZ=|TZ=$TZ|" \
   -e "s|PUID=|PUID=$(id -u)|" \
   -e "s|PGID=|PGID=$(id -g)|" \
-  -e "s|ZURG_INSTANCES_REALDEBRID_API_KEY=|ZURG_INSTANCES_REALDEBRID_API_KEY=$RD_KEY|" \
-  -e "s|RIVEN_FRONTEND_ENV_ORIGIN=.*|RIVEN_FRONTEND_ENV_ORIGIN=$RIVEN_ORIGIN|" \
   docker-compose.yml
 
 ```
