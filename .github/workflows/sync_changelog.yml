@@ -1,15 +1,24 @@
 name: Sync Changelog
 
 on:
+  workflow_dispatch:  
   schedule:
     - cron: '0 0 * * *'
   pull_request:
     types:
       - closed
+    branches:
+      - master
+    paths:
+      - 'pyproject.toml'      
 
 jobs:
   update-changelog:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
     steps:
       - name: Checkout MkDocs Repo
         uses: actions/checkout@v3
@@ -25,13 +34,44 @@ jobs:
             curl --fail --show-error https://raw.githubusercontent.com/I-am-PUID-0/DMB/master/CHANGELOG.md
           } > docs/changelog.md
 
-      - name: Commit and Push Changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check if Changelog Changed
+        id: check_changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add docs/changelog.md
-          git commit -m "Update Changelog" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
-          git push
+          if git diff --quiet docs/changelog.md; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        if: steps.check_changes.outputs.changed == 'true'
+        id: cpr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update Changelog"
+          branch: changelog-update
+          title: "Automated Changelog Update"
+          body: "This PR updates the changelog from the upstream repo."
+          delete-branch: true
+
+      - name: Extract PR Number
+        if: steps.cpr.outputs.pull-request-url != ''
+        id: extract_pr
+        run: |
+          echo "pull_request_number=$(echo "${{ steps.cpr.outputs.pull-request-url }}" | awk -F/ '{print $NF}')" >> $GITHUB_OUTPUT
+
+      - name: Auto Approve PR
+        if: success() && steps.extract_pr.outputs.pull_request_number != ''
+        uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          pull-request-number: ${{ steps.extract_pr.outputs.pull_request_number }}
+
+      - name: Enable Auto-Merge via gh CLI
+        if: success() && steps.extract_pr.outputs.pull_request_number != ''
+        run: |
+          pr_number=${{ steps.extract_pr.outputs.pull_request_number }}
+          gh pr merge "$pr_number" --squash --auto
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN }}
